@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Utbildnings- och träningsprogrammet – Head of Happiness</title>
+<meta name="description" content="Så är programmet uppbyggt: korta kunskapsdelar, övningar, reflektion och digitala gruppträffar.">
+<meta property="og:title" content="Utbildnings- och träningsprogrammet – Head of Happiness">
+<meta property="og:description" content="Så är programmet uppbyggt: korta kunskapsdelar, övningar, reflektion och digitala gruppträffar.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/hh-mark.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300..500;1,8..60,300..400&amp;display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: #FBF7EF; }
+  * { box-sizing: border-box; }
+  a { color: #123252; text-decoration: none; }
+  a:hover { color: #BF6A5B; }
+  .nav-toggle { display: none; }
+  .nav-links > a { white-space: nowrap; }
+  @media (max-width: 1000px) {
+    .nav-links { display: none !important; }
+    .nav-links[data-open="true"] { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; position: absolute; top: 100%; left: 0; right: 0; padding: 14px clamp(18px, 4vw, 40px) 22px; background: #FBF7EF; border-bottom: 1px solid rgba(18,50,82,0.12); }
+    .nav-toggle { display: inline-flex; }
+  }
+  .omraden { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+  .steps-grid { display: grid; grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 620px) { .steps-grid { grid-template-columns: 1fr; } }
+  @media (min-width: 1060px) { .steps-grid { grid-template-columns: repeat(4, 1fr); } }
+  @media (min-width: 1000px) { .mockups { grid-template-columns: 1fr 250px; align-items: center; } }
+</style>
+<style>
+.x1:hover { background: #1B4571; color: #FBF7EF; }
+.x2:hover { background: #FBF7EF; color: #123252; }
+</style>
+</head>
+<body>
+
+
+
+<div style="background: #FBF7EF; color: #123252; font-family: 'Figtree', system-ui, sans-serif; font-weight: 400; line-height: 1.6; overflow-x: hidden;">
+
+  <header style="position: sticky; top: 0; z-index: 20; background: rgba(251,247,239,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(18,50,82,0.1);">
+    <div style="max-width: 1160px; margin: 0 auto; padding: 14px clamp(18px, 4vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+      <a href="index.html" style="display: inline-flex; align-items: center; gap: 11px; font-weight: 600; font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase;">
+        <span style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 11px; background: #123252;"><img src="assets/hh-mark.png" alt="" style="display: block; width: 22px; height: 22px; object-fit: contain;"></span>
+        Head of Happiness
+      </a>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <nav class="nav-links" data-open="false" style="display: flex; align-items: center; gap: clamp(13px, 1.8vw, 24px); font-size: 15px;">
+          <a href="for-arbetsgivare.html" style="min-height: 44px; display: inline-flex; align-items: center;">För arbetsgivare</a>
+          <a href="for-dig-sjalv.html" style="min-height: 44px; display: inline-flex; align-items: center;">För dig själv</a>
+          <a href="om-oss.html" style="min-height: 44px; display: inline-flex; align-items: center;">Om oss</a>
+          <a href="varfor-investera.html" style="min-height: 44px; display: inline-flex; align-items: center;">Varför investera</a>
+        </nav>
+        <a href="fa-ett-forslag.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; background: #123252; color: #FBF7EF; border-radius: 999px; font-size: 14.5px; font-weight: 600; white-space: nowrap;" class="x1">Få ett förslag</a>
+        <button class="nav-toggle" data-nav-toggle type="button" aria-label="Meny" style="align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid rgba(18,50,82,0.2); border-radius: 999px; background: transparent; color: #123252; font-size: 17px; cursor: pointer;">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="max-width: 1160px; margin: 0 auto; padding: clamp(44px, 7vw, 96px) clamp(18px, 4vw, 40px) clamp(44px, 6vw, 76px);">
+    <p style="margin: 0 0 20px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #BF6A5B;">Utbildnings- och träningsprogram</p>
+    <h1 style="margin: 0; max-width: 22em; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(34px, 5.6vw, 62px); line-height: 1.07; letter-spacing: -0.022em; text-wrap: balance;">Från stress till lugn, lust &amp; kraft</h1>
+    <p style="margin: 26px 0 0; max-width: 34em; font-size: clamp(17px, 2vw, 20px); line-height: 1.62; color: rgba(18,50,82,0.78); text-wrap: pretty;">En del av Head of Happiness system för arbetsgivare. Medarbetaren får kunskap, konkreta verktyg och träning inom områden som har stor betydelse för hur vi mår och kan fokusera på det som är mest relevant för den egna situationen.</p>
+  </section>
+
+  <section data-screen-label="Ett stöd som finns där" style="background: #F2E9D8;">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) clamp(18px, 4vw, 40px);">
+      <h2 style="margin: 0 0 clamp(22px, 3vw, 32px); max-width: 22em; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(27px, 4vw, 44px); line-height: 1.12; letter-spacing: -0.018em; text-wrap: balance;">Ett stöd som finns där när det behövs</h2>
+      <p style="margin: 0 0 clamp(34px, 4.5vw, 52px); max-width: 32em; font-size: clamp(18px, 2.2vw, 21px); line-height: 1.6; font-weight: 500; color: #123252; text-wrap: pretty;">Programmet är inte tänkt att genomföras från början till slut av alla. Medarbetaren får tillgång till kunskap, träning och konkreta verktyg att använda utifrån sin egen situation.</p>
+      <div class="steps-grid" style="gap: clamp(14px, 1.6vw, 18px);">
+        
+          <div style="background: #FFFFFF; border: 1px solid rgba(191,106,91,0.22); border-radius: 18px; padding: clamp(22px, 2.4vw, 28px); display: flex; flex-direction: column; gap: 10px;">
+            <h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(19px, 2vw, 22px); line-height: 1.24;">Förebyggande</h3>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: rgba(18,50,82,0.74); text-wrap: pretty;">Kunskap och verktyg för att stärka sina resurser innan stress leder till ohälsa.</p>
+          </div>
+        
+          <div style="background: #FFFFFF; border: 1px solid rgba(191,106,91,0.22); border-radius: 18px; padding: clamp(22px, 2.4vw, 28px); display: flex; flex-direction: column; gap: 10px;">
+            <h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(19px, 2vw, 22px); line-height: 1.24;">Tillgängligt när behovet uppstår</h3>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: rgba(18,50,82,0.74); text-wrap: pretty;">Tillgången finns kvar, så medarbetaren kan gå in när något förändras eller stöd behövs.</p>
+          </div>
+        
+          <div style="background: #FFFFFF; border: 1px solid rgba(191,106,91,0.22); border-radius: 18px; padding: clamp(22px, 2.4vw, 28px); display: flex; flex-direction: column; gap: 10px;">
+            <h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(19px, 2vw, 22px); line-height: 1.24;">Kompletterande stöd</h3>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: rgba(18,50,82,0.74); text-wrap: pretty;">Kan vara relevant även när en medarbetare redan har stressrelaterade besvär eller är sjukskriven.</p>
+          </div>
+        
+          <div style="background: #FFFFFF; border: 1px solid rgba(191,106,91,0.22); border-radius: 18px; padding: clamp(22px, 2.4vw, 28px); display: flex; flex-direction: column; gap: 10px;">
+            <h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(19px, 2vw, 22px); line-height: 1.24;">Kunskapen finns kvar</h3>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: rgba(18,50,82,0.74); text-wrap: pretty;">Den som missade föreläsningen eller vill repetera hittar motsvarande innehåll i programmet.</p>
+          </div>
+        
+      </div>
+      <p style="margin: clamp(22px, 3vw, 30px) 0 0; max-width: 40em; font-size: 15.5px; line-height: 1.62; color: rgba(18,50,82,0.6);">Programmet ersätter inte medicinsk vård eller psykologisk behandling. Tillgång i 365 dagar innebär att stödet finns kvar under hela året, inte att det ska betas av.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Så hjälper vi dig" style="background: #FBF7EF;"><div style="max-width: 1160px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) clamp(18px, 4vw, 40px);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(30px, 5vw, 64px); margin-bottom: clamp(38px, 5vw, 60px);">
+      <div>
+        <p style="margin: 0 0 16px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #BF6A5B;">Så är programmet uppbyggt</p>
+        <h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(27px, 4vw, 42px); line-height: 1.14; letter-spacing: -0.015em; text-wrap: balance;">Från förståelse till förändring</h2>
+      </div>
+      <div style="align-self: center; display: flex; flex-direction: column; gap: 16px; max-width: 32em;">
+        <p style="margin: 0; font-size: clamp(17px, 2vw, 19px); line-height: 1.68; color: rgba(18,50,82,0.8); text-wrap: pretty;">Det finns ingen övning som är rätt för alla. Vad som belastar den enskilda medarbetaren, vad hen behöver och var hen behöver börja är individuellt.</p>
+        <p style="margin: 0; font-size: clamp(17px, 2vw, 19px); line-height: 1.68; color: #123252; font-weight: 500; text-wrap: pretty;">Därför börjar programmet med individen. Medarbetaren får förstå vad som påverkar just hen och tar sedan ett steg i taget, från stress och låg energi mot mer lugn, kraft och handlingsutrymme.</p>
+      </div>
+    </div>
+    <ol class="steps-grid" style="margin: 0; padding: 0; list-style: none; gap: clamp(14px, 1.6vw, 18px);">
+      
+        <li style="background: #FFFFFF; border: 1px solid rgba(191,106,91,0.22); border-radius: 18px; padding: clamp(22px, 2.4vw, 28px); display: flex; flex-direction: column; gap: 12px;">
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 999px; background: #F9E0A9; font-family: 'Source Serif 4', Georgia, serif; font-size: 15px; color: #8F4636;">01</span>
+          <h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(19px, 2vw, 22px); line-height: 1.24;">Kunskap ger trygghet</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #123252; font-weight: 500; text-wrap: pretty;">Förståelsen skapar trygghet och kan ge tillbaka känslan av kontroll, redan innan något omkring har förändrats.</p>
+        </li>
+      
+        <li style="background: #FFFFFF; border: 1px solid rgba(191,106,91,0.22); border-radius: 18px; padding: clamp(22px, 2.4vw, 28px); display: flex; flex-direction: column; gap: 12px;">
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 999px; background: #F9E0A9; font-family: 'Source Serif 4', Georgia, serif; font-size: 15px; color: #8F4636;">02</span>
+          <h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(19px, 2vw, 22px); line-height: 1.24;">Skapa lugn &amp; återhämtning</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #123252; font-weight: 500; text-wrap: pretty;">Och när kraften börjar komma tillbaka blir det lättare att ta tag i det som faktiskt behöver förändras.</p>
+        </li>
+      
+        <li style="background: #FFFFFF; border: 1px solid rgba(191,106,91,0.22); border-radius: 18px; padding: clamp(22px, 2.4vw, 28px); display: flex; flex-direction: column; gap: 12px;">
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 999px; background: #F9E0A9; font-family: 'Source Serif 4', Georgia, serif; font-size: 15px; color: #8F4636;">03</span>
+          <h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(19px, 2vw, 22px); line-height: 1.24;">Bli bättre rustad</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #123252; font-weight: 500; text-wrap: pretty;">Verktyg för att hantera tankar, känslor och svåra situationer på mer hjälpsamma sätt och känna större trygghet i den egna förmågan när livet utmanar.</p>
+        </li>
+      
+        <li style="background: #FFFFFF; border: 1px solid rgba(191,106,91,0.22); border-radius: 18px; padding: clamp(22px, 2.4vw, 28px); display: flex; flex-direction: column; gap: 12px;">
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 999px; background: #F9E0A9; font-family: 'Source Serif 4', Georgia, serif; font-size: 15px; color: #8F4636;">04</span>
+          <h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(19px, 2vw, 22px); line-height: 1.24;">Skapa det liv du vill leva</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #123252; font-weight: 500; text-wrap: pretty;">Stöd att sätta gränser, göra medvetna val och steg för steg skapa mer av det liv medarbetaren faktiskt vill leva.</p>
+        </li>
+      
+    </ol>
+  </div>
+  </section>
+
+  <section data-screen-label="En modul" style="background: #123252; color: #FBF7EF;">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) clamp(18px, 4vw, 40px); display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(30px, 5vw, 64px);">
+      <div>
+        <h2 style="margin: 0 0 22px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(27px, 4vw, 42px); line-height: 1.14; letter-spacing: -0.015em;">Så ser ett område ut</h2>
+        <p style="margin: 0; font-size: 17.5px; line-height: 1.68; color: rgba(251,247,239,0.82); max-width: 32em; text-wrap: pretty;">Varje område består av korta delar som kombinerar kunskap, träning och reflektion. Medarbetaren kan ta del av innehållet i sin egen takt, pausa, repetera och välja det som är relevant.</p>
+      </div>
+      <ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; align-self: center;">
+        
+          <li style="display: flex; gap: 18px; padding: 18px 0; border-top: 1px solid rgba(251,247,239,0.16);">
+            <span style="flex: none; font-family: 'Source Serif 4', Georgia, serif; color: #F9E0A9; font-size: 16px;">01</span>
+            <div>
+              <p style="margin: 0 0 4px; font-size: 17px; font-weight: 600;">Korta kunskapsdelar</p>
+              <p style="margin: 0; font-size: 15.5px; line-height: 1.55; color: rgba(251,247,239,0.7);">Förstå ämnet och vad som händer i kropp, hjärna och beteende.</p>
+            </div>
+          </li>
+        
+          <li style="display: flex; gap: 18px; padding: 18px 0; border-top: 1px solid rgba(251,247,239,0.16);">
+            <span style="flex: none; font-family: 'Source Serif 4', Georgia, serif; color: #F9E0A9; font-size: 16px;">02</span>
+            <div>
+              <p style="margin: 0 0 4px; font-size: 17px; font-weight: 600;">Praktiska övningar</p>
+              <p style="margin: 0; font-size: 15.5px; line-height: 1.55; color: rgba(251,247,239,0.7);">Träna på konkreta verktyg som kan användas direkt i vardagen.</p>
+            </div>
+          </li>
+        
+          <li style="display: flex; gap: 18px; padding: 18px 0; border-top: 1px solid rgba(251,247,239,0.16);">
+            <span style="flex: none; font-family: 'Source Serif 4', Georgia, serif; color: #F9E0A9; font-size: 16px;">03</span>
+            <div>
+              <p style="margin: 0 0 4px; font-size: 17px; font-weight: 600;">Reflektionsfrågor</p>
+              <p style="margin: 0; font-size: 15.5px; line-height: 1.55; color: rgba(251,247,239,0.7);">Förstå hur kunskapen hänger ihop med den egna situationen.</p>
+            </div>
+          </li>
+        
+          <li style="display: flex; gap: 18px; padding: 18px 0; border-top: 1px solid rgba(251,247,239,0.16);">
+            <span style="flex: none; font-family: 'Source Serif 4', Georgia, serif; color: #F9E0A9; font-size: 16px;">04</span>
+            <div>
+              <p style="margin: 0 0 4px; font-size: 17px; font-weight: 600;">Arbetsbok</p>
+              <p style="margin: 0; font-size: 15.5px; line-height: 1.55; color: rgba(251,247,239,0.7);">Samla reflektioner, insikter och det man vill ta med sig vidare.</p>
+            </div>
+          </li>
+        
+      </ol>
+    </div>
+  </section>
+
+  <section data-screen-label="I appen och på datorn" style="max-width: 1160px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) clamp(18px, 4vw, 40px);">
+    <h2 style="margin: 0 0 18px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(27px, 4vw, 42px); line-height: 1.14; letter-spacing: -0.015em;">Tillgängligt i mobilen och på datorn</h2>
+    <p style="margin: 0 0 clamp(32px, 5vw, 48px); max-width: 36em; font-size: clamp(17px, 2vw, 19px); line-height: 1.66; color: rgba(18,50,82,0.8); text-wrap: pretty;">Programmet finns både i mobilen och på datorn. Medarbetaren använder samma inloggning och kan enkelt växla mellan enheterna.</p>
+    <div class="mockups" style="display: grid; gap: clamp(24px, 4vw, 44px);">
+      <img src="assets/programvy-dator.jpg" alt="Programmets översikt på datorn" style="display: block; width: 100%; border-radius: 18px; border: 1px solid rgba(18,50,82,0.12);">
+      <img src="assets/app-innehall.jpg" alt="Programmets innehåll i appen" style="display: block; width: 100%; max-width: 250px; border-radius: 24px; border: 1px solid rgba(18,50,82,0.12);">
+    </div>
+  </section>
+
+  <section data-screen-label="Gruppträffar" style="background: #F2E9D8;">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) clamp(18px, 4vw, 40px); display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(30px, 5vw, 64px);">
+      <div>
+        <h2 style="margin: 0 0 22px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(27px, 4vw, 42px); line-height: 1.14; letter-spacing: -0.015em;">Digitala träffar för stöd och fördjupning</h2>
+        <div style="display: flex; flex-direction: column; gap: 16px; max-width: 34em; font-size: clamp(17px, 2vw, 19px); line-height: 1.68; color: rgba(18,50,82,0.8);">
+          <p style="margin: 0; text-wrap: pretty;">Två gånger i månaden bjuds deltagarna in till en digital gruppträff på 60 minuter. Vi fördjupar oss i ett tema från programmet och skapar utrymme för frågor, reflektion och samtal.</p>
+          <p style="margin: 0; text-wrap: pretty;">Träffarna är frivilliga och ingår under hela året. Grupperna hålls små för att ge utrymme för frågor och samtal. Vid behov öppnar vi fler grupper.</p>
+        </div>
+      </div>
+      <div style="align-self: center; display: flex; flex-direction: column; gap: 20px;">
+        <div style="border-radius: 18px; overflow: hidden;">
+          <img src="assets/livetraff-zoom.jpg" alt="Lisa leder en digital live-träff" style="display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover;">
+        </div>
+        <p style="margin: 0; font-size: 15px; color: rgba(18,50,82,0.6);">Teman kan till exempel vara</p>
+        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 9px;">
+          
+            <li style="padding: 10px 18px; background: #F9E0A9; border-radius: 999px; font-size: 16px; font-weight: 500;">Sömn</li>
+          
+            <li style="padding: 10px 18px; background: #F9E0A9; border-radius: 999px; font-size: 16px; font-weight: 500;">Gränser</li>
+          
+            <li style="padding: 10px 18px; background: #F9E0A9; border-radius: 999px; font-size: 16px; font-weight: 500;">Tankar &amp; känslor</li>
+          
+            <li style="padding: 10px 18px; background: #F9E0A9; border-radius: 999px; font-size: 16px; font-weight: 500;">Återhämtning</li>
+          
+            <li style="padding: 10px 18px; background: #F9E0A9; border-radius: 999px; font-size: 16px; font-weight: 500;">Rörelse</li>
+          
+            <li style="padding: 10px 18px; background: #F9E0A9; border-radius: 999px; font-size: 16px; font-weight: 500;">Det som är viktigt för dig</li>
+          
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Slutgiltig CTA" style="background: #123252; color: #FBF7EF;">
+    <div style="max-width: 780px; margin: 0 auto; padding: clamp(60px, 9vw, 120px) clamp(18px, 4vw, 40px); text-align: center;">
+      <h2 style="margin: 0 0 20px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(29px, 4.6vw, 50px); line-height: 1.1; letter-spacing: -0.02em;">Vill ni erbjuda programmet till era medarbetare?</h2>
+      <p style="margin: 0 auto 34px; max-width: 26em; font-size: clamp(17px, 2vw, 19px); line-height: 1.62; color: rgba(251,247,239,0.8);">Programmet kan ingå i Head of Happiness upplägg under tre månader eller erbjudas som ett fristående stöd. Medarbetarna får 365 dagars tillgång till programmet och möjlighet att delta i digitala gruppträffar.<br><br>Pris anpassas efter antal medarbetare.</p>
+      <a href="fa-ett-forslag.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 60px; padding: 0 44px; background: #F9E0A9; color: #123252; border-radius: 999px; font-size: 17px; font-weight: 600; white-space: nowrap;" class="x2">Få ett förslag</a>
+      <p style="margin: 22px 0 0; font-size: 16px; color: rgba(251,247,239,0.75);">Hellre prata först? <a href="https://calendly.com/lisa-headofhappiness/lisa" target="_blank" rel="noopener" style="color: #F9E0A9; font-weight: 600; text-decoration: underline;">Boka ett möte</a></p>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid rgba(18,50,82,0.12);">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(36px, 5vw, 56px) clamp(18px, 4vw, 40px); display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: clamp(24px, 4vw, 48px); font-size: 15px;">
+      <div>
+        <p style="margin: 0 0 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; font-size: 13px;">Head of Happiness</p>
+        <p style="margin: 0; color: rgba(18,50,82,0.6); line-height: 1.6;">hej@headofhappiness.se<br>0708 200894</p>
+      </div>
+      <nav style="display: flex; flex-direction: column; gap: 9px;">
+        <a href="for-arbetsgivare.html">För arbetsgivare</a>
+        <a href="for-dig-sjalv.html">För dig själv</a>
+        <a href="fa-ett-forslag.html">Få ett förslag</a>
+      </nav>
+      <nav style="display: flex; flex-direction: column; gap: 9px;">
+        <a href="om-oss.html">Om oss</a>
+        <a href="varfor-investera.html">Varför investera</a>
+        <a href="halsosamtal.html">Hälsosamtal</a>
+      </nav>
+      <p style="margin: 0; color: rgba(18,50,82,0.45); font-size: 13.5px; line-height: 1.6;">Head of Happiness AB<br>556834-4518</p>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var t=document.querySelector('[data-nav-toggle]'), n=document.querySelector('.nav-links');
+  if(!t||!n) return;
+  t.addEventListener('click', function(){
+    var open = n.getAttribute('data-open')==='true';
+    n.setAttribute('data-open', open?'false':'true');
+    t.textContent = open ? '\u2630' : '\u2715';
+  });
+})();
+</script>
+</body>
+</html>
