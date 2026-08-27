@@ -6,7 +6,6 @@
 <title>Sidan har flyttat – Head of Happiness</title>
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://boka.headofhappiness.se/challenge-page/89fb7fc5-d357-41b6-9ac9-924b1dcf984e">
-<meta http-equiv="refresh" content="0; url=https://boka.headofhappiness.se/challenge-page/89fb7fc5-d357-41b6-9ac9-924b1dcf984e">
 <style>
   body { margin:0; background:#FBF7EF; color:#123252; font-family:'Figtree',system-ui,sans-serif; line-height:1.6; }
   main { max-width:34em; margin:0 auto; padding:18vh 24px 0; }
@@ -15,9 +14,15 @@
 </head>
 <body>
 <main>
-  <p>Sidan har flyttat.</p>
+  <p>Sidan har flyttat till bokningen.</p>
   <p><a href="https://boka.headofhappiness.se/challenge-page/89fb7fc5-d357-41b6-9ac9-924b1dcf984e">Fortsätt hit</a> om du inte skickas vidare automatiskt.</p>
 </main>
-<script>location.replace("https://boka.headofhappiness.se/challenge-page/89fb7fc5-d357-41b6-9ac9-924b1dcf984e");</script>
+<script>
+(function(){
+  var t="https://boka.headofhappiness.se/challenge-page/89fb7fc5-d357-41b6-9ac9-924b1dcf984e";
+  if(location.search.indexOf("hohr=1")>-1) return;      // redan skickad hit en gang - avbryt, undvik loop
+  location.replace(t+(t.indexOf("?")>-1?"&":"?")+"hohr=1");
+})();
+</script>
 </body>
 </html>
