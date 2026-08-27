@@ -21,12 +21,12 @@
   .nav-links > a { white-space: nowrap; }
   @media (max-width: 1000px) {
     .nav-links { display: none !important; }
-    .nav-links[data-open="true"] { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; position: absolute; top: 100%; left: 0; right: 0; padding: 14px clamp(18px, 4vw, 40px) 22px; background: #FBF7EF; border-bottom: 1px solid rgba(18,50,82,0.12); }
+    .nav-links[data-open="true"] { display: flex !important; flex-direction: column; align-items: flex-start; gap: 4px; position: absolute; top: 100%; left: 0; right: 0; padding: 14px clamp(18px, 4vw, 40px) 22px; background: #FBF7EF; border-bottom: 1px solid rgba(18,50,82,0.12); }
     .nav-toggle { display: inline-flex; }
   }
   @media (max-width: 1000px) {
     .hero-split { grid-template-columns: 1fr !important; }
-    .hero-img-wrap { width: 100%; height: min(126vw, 1150px) !important; min-height: 0 !important; order: -1; }
+    .hero-img-wrap { width: 100%; height: min(62vw, 380px) !important; min-height: 0 !important; }
     .hero-img-inner { left: 0; aspect-ratio: auto !important; }
     .hero-img-wrap img { object-position: 50% 0% !important; }
     .hero-fade-x { display: none !important; }
