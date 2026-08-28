@@ -30,8 +30,9 @@
     .hm-hjul { aspect-ratio: auto; max-width: none; display: flex; flex-direction: column; align-items: center; gap: 18px; }
     .hm-ring { display: none; }
     .hm-mitt { position: static; transform: none; width: auto; height: auto; padding: 14px 34px; border-radius: 999px; }
-    .hm-lista { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .hm-omrade { position: static; transform: none; white-space: normal; }
+    .hm-lista { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; width: 100%; max-width: 440px; }
+    .hm-omrade { position: static; transform: none; white-space: normal; max-width: none; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 64px; padding: 12px 14px; }
+    .hm-omrade:last-child { grid-column: 1 / -1; width: calc(50% - 5px); margin: 0 auto; }
   }
   .nav-links > a { white-space: nowrap; }
   @media (max-width: 1000px) {
