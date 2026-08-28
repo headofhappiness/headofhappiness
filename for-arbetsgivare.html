@@ -22,15 +22,23 @@
   .hm-hjul { position: relative; width: 100%; max-width: 520px; margin: 0 auto; aspect-ratio: 1; }
   .hm-ring { position: absolute; left: 50%; top: 50%; width: 76%; height: 76%; transform: translate(-50%, -50%); border: 1px solid rgba(191,106,91,0.4); border-radius: 50%; }
   .hm-mitt { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; text-align: center; width: 42%; height: 42%; margin: 0; background: #123252; color: #F9E0A9; border-radius: 50%; font-family: 'Source Serif 4', Georgia, serif; font-size: clamp(17px, 2.6vw, 23px); line-height: 1.2; padding: 8px; }
+  .hm-prick { display: none; }
   .hm-lista { list-style: none; margin: 0; padding: 0; }
   .hm-omrade { position: absolute; transform: translate(-50%, -50%); background: #F9E0A9; color: #123252; border-radius: 999px; padding: 9px 16px; font-size: clamp(13px, 1.5vw, 15.5px); font-weight: 500; line-height: 1.25; white-space: normal; max-width: 10em; text-align: center; }
-  @media (max-width: 720px) {
-    .hm-hjul { aspect-ratio: auto; max-width: none; display: flex; flex-direction: column; align-items: center; gap: 18px; }
-    .hm-ring { display: none; }
-    .hm-mitt { position: static; transform: none; width: auto; height: auto; padding: 16px 32px; border-radius: 999px; }
-    .hm-lista { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; width: 100%; max-width: 440px; }
-    .hm-omrade { position: static; transform: none; white-space: normal; max-width: none; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 64px; padding: 12px 14px; }
-    .hm-omrade:last-child { grid-column: 1 / -1; width: calc(50% - 5px); margin: 0 auto; }
+@media (max-width: 720px) {
+    .hm-hjul { --ring: 232px; --ringmitt: 130px; position: relative; display: block; aspect-ratio: auto; max-width: 420px; padding-top: 252px; }
+    .hm-ring { display: block; width: calc(var(--ring) * 0.76); height: calc(var(--ring) * 0.76); left: 50%; top: var(--ringmitt); transform: translate(-50%, -50%); }
+    .hm-mitt { position: absolute; left: 50%; top: var(--ringmitt); transform: translate(-50%, -50%); width: calc(var(--ring) * 0.46); height: calc(var(--ring) * 0.46); padding: 6px; font-size: 14px; line-height: 1.15; border-radius: 50%; }
+    .hm-lista { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 18px; width: 100%; }
+    .hm-omrade { position: static; transform: none; background: none; color: #123252; border-radius: 0; padding: 7px 0; max-width: none; min-height: 0; text-align: left; font-size: 14.5px; display: flex; align-items: center; gap: 10px; }
+    .hm-omrade:last-child { grid-column: auto; width: auto; margin: 0; }
+    .hm-prick { display: block; flex: 0 0 auto; width: 11px; height: 11px; border-radius: 50%; background: var(--f); }
+    .hm-omrade::before {
+      content: ""; position: absolute; width: 15px; height: 15px; border-radius: 50%;
+      background: var(--f); transform: translate(-50%, -50%);
+      left: calc(50% + (var(--nx) - 50) * var(--ring) / 100);
+      top: calc(var(--ringmitt) + (var(--ny) - 50) * var(--ring) / 100);
+    }
   }
   .tidslinje { grid-template-columns: 1fr auto 1fr auto 1fr; }
   @media (max-width: 780px) { .tidslinje { grid-template-columns: 1fr; } .tidslinje .pil { display: none; } }
@@ -199,13 +207,13 @@
           <div class="hm-ring" aria-hidden="true"></div>
           <p class="hm-mitt">Medarbetaren</p>
           <ul class="hm-lista">
-            <li class="hm-omrade" style="left: 50.0%; top: 9.0%;">Stress &amp; belastning</li>
-          <li class="hm-omrade" style="left: 82.1%; top: 24.4%;">Sömn</li>
-          <li class="hm-omrade" style="left: 90.0%; top: 59.1%;">Rörelse</li>
-          <li class="hm-omrade" style="left: 67.8%; top: 86.9%;">Relationer</li>
-          <li class="hm-omrade" style="left: 32.2%; top: 86.9%;">Det som är viktigt för oss</li>
-          <li class="hm-omrade" style="left: 10.0%; top: 59.1%;">Tankar &amp; känslor</li>
-          <li class="hm-omrade" style="left: 17.9%; top: 24.4%;">Återhämtning</li>
+            <li class="hm-omrade" style="left: 50.0%; top: 9.0%; --nx: 50.0; --ny: 9.0; --f: #BF6A5B;"><span class="hm-prick" aria-hidden="true"></span>Stress &amp; belastning</li>
+          <li class="hm-omrade" style="left: 82.1%; top: 24.4%; --nx: 82.1; --ny: 24.4; --f: #4A6FA5;"><span class="hm-prick" aria-hidden="true"></span>Sömn</li>
+          <li class="hm-omrade" style="left: 90.0%; top: 59.1%; --nx: 90.0; --ny: 59.1; --f: #7F9455;"><span class="hm-prick" aria-hidden="true"></span>Rörelse</li>
+          <li class="hm-omrade" style="left: 67.8%; top: 86.9%; --nx: 67.8; --ny: 86.9; --f: #D19A3C;"><span class="hm-prick" aria-hidden="true"></span>Relationer</li>
+          <li class="hm-omrade" style="left: 32.2%; top: 86.9%; --nx: 32.2; --ny: 86.9; --f: #8E5C7E;"><span class="hm-prick" aria-hidden="true"></span>Det som är viktigt för oss</li>
+          <li class="hm-omrade" style="left: 10.0%; top: 59.1%; --nx: 10.0; --ny: 59.1; --f: #47837B;"><span class="hm-prick" aria-hidden="true"></span>Tankar &amp; känslor</li>
+          <li class="hm-omrade" style="left: 17.9%; top: 24.4%; --nx: 17.9; --ny: 24.4; --f: #123252;"><span class="hm-prick" aria-hidden="true"></span>Återhämtning</li>
           </ul>
         </div>
       </div>
