@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.headofhappiness.se/</loc><priority>1.0</priority></url>
   <url><loc>https://www.headofhappiness.se/for-arbetsgivare.html</loc><priority>0.9</priority></url>
-  <url><loc>https://www.headofhappiness.se/for-dig-sjalv.html</loc><priority>0.9</priority></url>
+  <url><loc>https://www.headofhappiness.se/starta.html</loc><priority>0.9</priority></url>
   <url><loc>https://www.headofhappiness.se/programmet.html</loc><priority>0.7</priority></url>
   <url><loc>https://www.headofhappiness.se/varfor-investera.html</loc><priority>0.8</priority></url>
   <url><loc>https://www.headofhappiness.se/halsosamtal.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.headofhappiness.se/individuellt-stod.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.headofhappiness.se/stresstecken/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.headofhappiness.se/stresstest/</loc><priority>0.7</priority></url>
   <url><loc>https://www.headofhappiness.se/om-oss.html</loc><priority>0.6</priority></url>
   <url><loc>https://www.headofhappiness.se/fa-ett-forslag.html</loc><priority>0.8</priority></url>
 </urlset>
