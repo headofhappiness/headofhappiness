@@ -28,6 +28,9 @@
     .nav-links[data-open="true"] { display: flex !important; flex-direction: column; align-items: flex-start; gap: 4px; position: absolute; top: 100%; left: 0; right: 0; padding: 14px clamp(18px, 4vw, 40px) 22px; background: #FBF7EF; border-bottom: 1px solid rgba(18,50,82,0.12); }
     .nav-toggle { display: inline-flex; }
   }
+
+  @media (max-width: 400px) { .hh-logo { font-size: 13.5px !important; letter-spacing: 0.06em !important; gap: 9px !important; } }
+  .logo-krymp { }
 </style>
 <style>
 .x1:hover { background: #1B4571; color: #FBF7EF; }
@@ -50,7 +53,7 @@
 
   <header style="position: sticky; top: 0; z-index: 20; background: rgba(251,247,239,0.93); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(18,50,82,0.1);">
     <div style="max-width: 1160px; margin: 0 auto; padding: 13px clamp(18px, 4vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 18px; ">
-      <a href="index.html" style="display: inline-flex; align-items: center; gap: 11px; font-weight: 600; font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase;">
+      <a href="index.html" class="hh-logo" style="display: inline-flex; align-items: center; gap: 11px; font-weight: 600; font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap;">
         <span style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 11px; background: #123252;"><img src="assets/hh-mark.png" alt="" style="display: block; width: 22px; height: 22px; object-fit: contain;"></span>
         Head of Happiness
       </a>
@@ -207,8 +210,8 @@
       </div>
       <div style="background: #FFFFFF; border: 1px solid rgba(191,106,91,0.22); border-radius: 18px; padding: clamp(26px, 3.2vw, 36px);">
         <p style="margin: 0 0 14px; font-size: 12.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #BF6A5B;">När frånvaron kommer</p>
-        <h3 style="margin: 0 0 16px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(23px, 2.6vw, 30px); line-height: 1.16; letter-spacing: -0.01em;">Två veckors sjukfrånvaro: cirka 31 000 kr</h3>
-        <p style="margin: 0; font-size: 16.5px; line-height: 1.62; color: rgba(18,50,82,0.8); text-wrap: pretty;">För en medarbetare med 48 000 kr i månadslön blir kostnaden för arbetsgivaren omkring 31 000 kronor under de första två veckorna, enligt en beräkning utifrån Skandias modell.</p>
+        <h3 style="margin: 0 0 16px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(23px, 2.6vw, 30px); line-height: 1.16; letter-spacing: -0.01em;">Två veckors sjukfrånvaro:<span style="display: block; white-space: nowrap;">cirka 31&nbsp;000 kr</span></h3>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.62; color: rgba(18,50,82,0.8); text-wrap: pretty;">För en medarbetare med 48 000 kr i månadslön blir kostnaden för arbetsgivaren omkring 31 000 kronor under de första två veckorna, enligt en beräkning utifrån Skandias modell.</p>
         <p style="margin: 16px 0 0; font-size: 13px; color: rgba(18,50,82,0.5);">Källa: <a href="https://www.skandia.se/artiklar/foretag/vad-kostar-en-sjukskrivning/" target="_blank" rel="noopener" style="color: rgba(18,50,82,0.55); text-decoration: underline;">Skandia, Vad kostar en sjukskrivning?</a></p>
       </div>
       <div style="background: #123252; border-radius: 18px; padding: clamp(26px, 3.2vw, 36px); color: #FBF7EF;">
@@ -219,12 +222,12 @@
       </div>
     </div>
     <details style="margin: clamp(22px, 3vw, 26px) 0 0; max-width: 44em;">
-      <summary style="cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 13.5px; color: rgba(18,50,82,0.55);">Exemplet bygger på en månadslön på 48 000 kr. <span style="font-weight: 600; color: #123252; text-decoration: underline;">Så har vi räknat →</span></summary>
+      <summary style="cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 13.5px; color: rgba(18,50,82,0.55);">Exemplet bygger på en månadslön på 48 000 kr. <span style="font-weight: 600; color: #123252; text-decoration: underline;">Så har vi räknat →</span></summary>
       <div style="margin: 8px 0 0; padding: clamp(20px, 2.6vw, 26px); background: #FBF7EF; border-radius: 14px; display: flex; flex-direction: column; gap: 12px; font-size: 15.5px; line-height: 1.6; color: rgba(18,50,82,0.8);">
         <p style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 20px; line-height: 1.3; color: #123252;">Så har vi räknat</p>
-        <p style="margin: 0; text-wrap: pretty;">Räkneexemplet gäller en medarbetare med 48 000 kr i månadslön och visar arbetsgivarens uppskattade kostnad under de första två veckornas sjukfrånvaro.</p>
+        <p style="margin: 0; text-wrap: pretty;">Räkneexemplet gäller en medarbetare med 48 000 kr i månadslön och visar arbetsgivarens uppskattade kostnad under de första två veckornas sjukfrånvaro.</p>
         <p style="margin: 0; text-wrap: pretty;">Beräkningen utgår från Skandias modell och omfattar sjuklön dag 2–14, arbetsgivaravgifter och semestertillägg samt ett schablonpåslag på 30 procent för indirekta kostnader.</p>
-        <p style="margin: 0; font-weight: 600; color: #123252;">Beräknad kostnad: cirka 31 000 kr.</p>
+        <p style="margin: 0; font-weight: 600; color: #123252;">Beräknad kostnad: cirka 31 000 kr.</p>
         <p style="margin: 0; text-wrap: pretty;">Indirekta kostnader kan exempelvis vara administration, produktionsbortfall och påverkan på verksamheten. Den faktiska kostnaden varierar beroende på lön, bransch, roll och verksamhet.</p>
         <p style="margin: 0; font-size: 13.5px; color: rgba(18,50,82,0.55);">Källa: <a href="https://www.skandia.se/artiklar/foretag/vad-kostar-en-sjukskrivning/" target="_blank" rel="noopener" style="color: rgba(18,50,82,0.55); text-decoration: underline;">Skandia, Vad kostar en sjukskrivning?</a><br>Beräkningsmodell: Personalekonomi idag (2017), enligt Skandias redovisade modell.</p>
       </div>
@@ -372,7 +375,7 @@
 
   <section data-screen-label="Snällt smart enkelt" style="background: #F9E0A9;">
     <div style="max-width: 1160px; margin: 0 auto; padding: clamp(56px, 8vw, 100px) clamp(18px, 4vw, 40px);">
-      <h2 style="margin: 0 0 clamp(30px, 4.5vw, 50px); font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(27px, 4vw, 42px); line-height: 1.14; letter-spacing: -0.015em; max-width: 26em; color: #123252; text-wrap: balance;">Snällt. Smart. Enkelt.</h2>
+      <h2 style="margin: 0 0 clamp(30px, 4.5vw, 50px); font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(27px, 4vw, 42px); line-height: 1.14; letter-spacing: -0.015em; max-width: 26em; color: #123252; text-wrap: balance;">Det behöver inte vara komplicerat</h2>
       <p style="margin: -18px 0 clamp(30px, 4.5vw, 48px); max-width: 34em; font-size: clamp(17px, 2vw, 20px); line-height: 1.62; color: rgba(18,50,82,0.8); text-wrap: pretty;">Det är egentligen ganska enkelt. Insatser för välmående behöver vara bra för människan, kloka för verksamheten och enkla att använda.</p>
     </div>
   </section>

@@ -43,6 +43,9 @@
     .nav-links[data-open="true"] { display: flex !important; flex-direction: column; align-items: flex-start; gap: 4px; position: absolute; top: 100%; left: 0; right: 0; padding: 14px clamp(18px, 4vw, 40px) 22px; background: #FBF7EF; border-bottom: 1px solid rgba(18,50,82,0.12); }
     .nav-toggle { display: inline-flex; }
   }
+
+  @media (max-width: 400px) { .hh-logo { font-size: 13.5px !important; letter-spacing: 0.06em !important; gap: 9px !important; } }
+  .logo-krymp { }
 </style>
 <style>
 .x1:hover { background: #1B4571; color: #FBF7EF; }
@@ -85,7 +88,7 @@
 
   <header style="position: sticky; top: 0; z-index: 20; background: rgba(251,247,239,0.93); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(18,50,82,0.1);">
     <div style="max-width: 1160px; margin: 0 auto; padding: 13px clamp(18px, 4vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 18px;">
-      <a href="index.html" style="display: inline-flex; align-items: center; gap: 11px; font-weight: 600; font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase;">
+      <a href="index.html" class="hh-logo" style="display: inline-flex; align-items: center; gap: 11px; font-weight: 600; font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap;">
         <span style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 11px; background: #123252;"><img src="assets/hh-mark.png" alt="" style="display: block; width: 22px; height: 22px; object-fit: contain;"></span>
         Head of Happiness
       </a>
@@ -287,7 +290,7 @@
               <p style="margin: 0; font-size: 15.5px; font-weight: 600; color: rgba(18,50,82,0.6);">Från stress till lugn, lust &amp; kraft · 365 dagars tillgång</p>
             </div>
             <div style="grid-column: span 2; min-width: 0;">
-              <p style="margin: 0 0 16px; font-size: 17px; line-height: 1.66; color: rgba(18,50,82,0.8); text-wrap: pretty;">För den som vill fördjupa sig och fortsätta arbeta med sitt välmående finns vårt digitala utbildnings och träningsprogram. Här får medarbetaren kunskap, reflektion, övningar och konkreta verktyg inom de områden som påverkar hur vi mår. Från januari 2027 ger digitala live-träffar möjlighet till fortsatt inspiration, frågor och stöd längs vägen.</p>
+              <p style="margin: 0 0 16px; font-size: 17px; line-height: 1.66; color: rgba(18,50,82,0.8); text-wrap: pretty;">För den som vill fördjupa sig och fortsätta arbeta med sitt välmående finns vårt digitala utbildnings- och träningsprogram. Här får medarbetaren kunskap, reflektion, övningar och konkreta verktyg inom de områden som påverkar hur vi mår. Från januari 2027 ger digitala live-träffar möjlighet till fortsatt inspiration, frågor och stöd längs vägen.</p>
               <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px;">
                 
                   <li style="padding: 7px 14px; background: #F9E0A9; border-radius: 999px; font-size: 14.5px; color: #8F4636;">Kunskap &amp; insikt</li>
@@ -310,7 +313,7 @@
     <div style="max-width: 1160px; margin: 0 auto; padding: clamp(52px, 7vw, 88px) clamp(18px, 4vw, 40px);">
     <p style="margin: 0 0 16px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #BF6A5B;">En enkel start</p>
     <h2 style="margin: 0 0 20px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(27px, 4vw, 42px); line-height: 1.14; letter-spacing: -0.015em;">Börja med tre månader.</h2>
-    <p style="margin: 0 0 clamp(34px, 5vw, 52px); max-width: 40em; font-size: clamp(17px, 2vw, 19px); line-height: 1.68; color: rgba(18,50,82,0.8); text-wrap: pretty;">Ni behöver inte bestämma er för en långsiktig lösning från början. Under tre månader får alla medarbetare en gemensam grund genom föreläsning och screening, med stöd, träning och fördjupning för den som vill. Därefter väljer ni om ni vill fortsätta.</p>
+    <p style="margin: 0 0 clamp(34px, 5vw, 52px); max-width: 40em; font-size: clamp(17px, 2vw, 19px); line-height: 1.68; color: rgba(18,50,82,0.8); text-wrap: pretty;">Ni behöver inte bestämma er för en långsiktig lösning från början. Under projektperioden får deltagarna tillgång till programmet. Efter tre månader väljer ni om ni vill fortsätta. Vill ni att medarbetarna ska behålla tillgången till programmet fortsätter ni med en prenumeration.</p>
     <div class="tidslinje" style="display: grid; align-items: start; gap: clamp(14px, 2.5vw, 28px);">
       <div>
         <p style="margin: 0 0 8px; font-size: 12.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #BF6A5B;">Start</p>
