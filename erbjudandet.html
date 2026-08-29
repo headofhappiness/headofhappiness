@@ -68,9 +68,10 @@
   .knapp:hover { background: #FBF7EF; }
 
   @media print {
-    @page { size: A4; margin: 9mm; }
+    @page { size: A4; margin: 8mm; }
     body { background: #FBF7EF; }
-    .blad { max-width: none; }
+    .blad { max-width: none; zoom: 0.71; }
+    .sida2 { break-before: page; }
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
     .ejtryck { display: none !important; }
     .del, .lattbox, .morkruta, .hjalte { break-inside: avoid; }
@@ -89,9 +90,9 @@
         <p class="ogon" style="color: #F9E0A9;">Erbjudande till arbetsgivare</p>
         <a href="https://www.headofhappiness.se" style="font-size: 13px; color: rgba(251,247,239,0.8);">headofhappiness.se</a>
       </div>
-      <button type="button" class="pdfknapp ejtryck plausible-event-name=Spara-pdf" onclick="window.print()">
-        <span aria-hidden="true" style="font-size: 15px; line-height: 1;">&#8595;</span>Spara som PDF
-      </button>
+      <a class="pdfknapp ejtryck plausible-event-name=Ladda-ner-pdf" href="assets/head-of-happiness-erbjudande.pdf" download="Head of Happiness - erbjudande till arbetsgivare.pdf">
+        <span aria-hidden="true" style="font-size: 15px; line-height: 1;">&#8595;</span>Ladda ner som PDF
+      </a>
     </div>
   </div>
 
@@ -160,7 +161,7 @@
       </div>
     </div>
 
-    <div class="tvaboxar" style="margin-top: 12px;">
+    <div class="tvaboxar sida2" style="margin-top: 12px;">
       <div class="lattbox">
         <p class="ogon" style="color: #A25A4D; margin-bottom: 7px;">Fristående individuellt stöd</p>
         <p style="margin: 0; font-size: 13.6px; line-height: 1.55; color: rgba(18,50,82,0.82); text-wrap: pretty;">Ni behöver inte köpa ett upplägg för hela organisationen. Det digitala programmet kan köpas som en fristående insats för en enskild medarbetare.</p>
