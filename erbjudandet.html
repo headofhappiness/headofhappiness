@@ -49,6 +49,7 @@
 
   .citat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
   @media (max-width: 700px) { .citat { grid-template-columns: 1fr; } }
+  .tryckhuvud { display: none; }
   .tvaboxar { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   @media (max-width: 700px) { .tvaboxar { grid-template-columns: 1fr; } }
   .lattbox { border: 1px solid rgba(191,106,91,0.36); border-radius: 12px; padding: 15px 17px; }
@@ -74,6 +75,11 @@
     body { background: #FBF7EF; }
     .blad { max-width: none; zoom: 0.71; }
     .sida2 { break-before: page; }
+    .tryckhuvud { display: flex !important; align-items: center; justify-content: space-between; gap: 18px; padding-bottom: 10px; margin-bottom: 18px; border-bottom: 1px solid rgba(18,50,82,0.2); }
+    .th-marke { display: inline-flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #123252; }
+    .th-ruta { display: flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 8px; background: #123252; }
+    .th-ruta img { display: block; width: 15px; height: 15px; object-fit: contain; }
+    .th-hoger { font-size: 11px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(18,50,82,0.6); }
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
     .ejtryck { display: none !important; }
     .del, .lattbox, .morkruta, .hjalte { break-inside: avoid; }
@@ -163,7 +169,11 @@
       </div>
     </div>
 
-    <div class="tvaboxar sida2" style="margin-top: 12px;">
+    <div class="tryckhuvud sida2" aria-hidden="true">
+      <span class="th-marke"><span class="th-ruta"><img src="assets/hh-mark.png" alt=""></span>Head of Happiness</span>
+      <span class="th-hoger">Erbjudande till arbetsgivare &middot; sida 2 av 2</span>
+    </div>
+    <div class="tvaboxar" style="margin-top: 12px;">
       <div class="lattbox">
         <p class="ogon" style="color: #A25A4D; margin-bottom: 7px;">Fristående individuellt stöd</p>
         <p style="margin: 0; font-size: 13.6px; line-height: 1.55; color: rgba(18,50,82,0.82); text-wrap: pretty;">Ni behöver inte köpa ett upplägg för hela organisationen. Det digitala programmet kan köpas som en fristående insats för en enskild medarbetare.</p>
