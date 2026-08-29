@@ -32,6 +32,15 @@
 
   @media (max-width: 400px) { .hh-logo { font-size: 13.5px !important; letter-spacing: 0.06em !important; gap: 9px !important; } }
   .logo-krymp { }
+  .hero-rad { display: grid; grid-template-columns: 1.12fr 0.88fr; gap: clamp(28px, 4vw, 56px); align-items: center; }
+  .hero-bild { margin: 0; }
+  .hero-bild img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 18px; }
+  .hero-bild figcaption { margin-top: 12px; font-size: 13.5px; color: rgba(18,50,82,0.62); }
+  @media (max-width: 860px) { .hero-rad { grid-template-columns: 1fr; } .hero-bild { max-width: 320px; } }
+  @media (max-width: 1000px) { .rutor-4 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+  @media (max-width: 560px) { .rutor-4 { grid-template-columns: 1fr !important; } }
+  @media (max-width: 900px) { .rutor-3 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+  @media (max-width: 600px) { .rutor-3 { grid-template-columns: 1fr !important; } }
 </style>
 <style>
 .x1:hover { background: #1B4571; color: #FBF7EF; }
@@ -94,18 +103,26 @@
   </header>
 
   <section data-screen-label="Hero" style="max-width: 1160px; margin: 0 auto; padding: clamp(44px, 7vw, 92px) clamp(18px, 4vw, 40px) clamp(40px, 6vw, 68px);">
+    <div class="hero-rad">
+      <div>
     <p style="margin: 0 0 20px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #A25A4D;">Föreläsning</p>
     <h1 style="margin: 0; max-width: 17em; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(30px, 4.2vw, 46px); line-height: 1.12; letter-spacing: -0.018em; text-wrap: balance;">Lugn, lust &amp; kraft i en vardag med höga krav, ambitioner och tidspress</h1>
     <p style="margin: 26px 0 0; max-width: 34em; font-size: clamp(17px, 2vw, 20px); line-height: 1.62; color: rgba(18,50,82,0.8); text-wrap: pretty;">En gemensam start för hela arbetsplatsen. Två timmar som ger medarbetarna förståelse för hur stress fungerar, vad som påverkar hur vi mår – och hur mycket vi faktiskt kan påverka själva.</p>
     <div style="margin: 32px 0 0; display: flex; flex-wrap: wrap; gap: 14px;">
-      <a class="plausible-event-name=Forslag" href="fa-ett-forslag.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 34px; background: #123252; color: #FBF7EF; border-radius: 999px; font-size: 17px; font-weight: 600; white-space: nowrap;" class="x1">Få ett förslag</a>
+      <a class="plausible-event-name=Forslag x1" href="fa-ett-forslag.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 34px; background: #123252; color: #FBF7EF; border-radius: 999px; font-size: 17px; font-weight: 600; white-space: nowrap;">Få ett förslag</a>
+    </div>
+      </div>
+      <figure class="hero-bild">
+        <img src="assets/lisa-portratt.jpg" alt="Lisa Jonsson, hälsopromotionsspecialist och föreläsare" loading="eager" decoding="async">
+        <figcaption>Lisa Jonsson · hälsopromotionsspecialist</figcaption>
+      </figure>
     </div>
   </section>
 
   <section style="background: #F9E0A9;" data-screen-label="Utfall">
     <div style="max-width: 1160px; margin: 0 auto; padding: clamp(48px, 7vw, 88px) clamp(18px, 4vw, 40px);">
       <h2 style="margin: 0 0 clamp(26px, 3.8vw, 38px); max-width: 20em; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(27px, 4vw, 42px); line-height: 1.14; letter-spacing: -0.018em; text-wrap: balance;">Efter föreläsningen ska varje medarbetare</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); gap: clamp(16px, 2.2vw, 22px);">
+      <div class="rutor-4" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(16px, 2.2vw, 22px);">
         <div style="background: #FBF7EF; border-radius: 18px; padding: clamp(22px, 2.8vw, 30px);">
           <div>
             <h3 style="margin: 0 0 7px; font-size: 18px; font-weight: 600; line-height: 1.3;">Förstå sin egen stress</h3>
@@ -138,7 +155,7 @@
     <div style="max-width: 1160px; margin: 0 auto; padding: clamp(52px, 7.5vw, 96px) clamp(18px, 4vw, 40px);">
       <h2 style="margin: 0 0 14px; max-width: 18em; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(27px, 4vw, 42px); line-height: 1.14; letter-spacing: -0.018em; text-wrap: balance;">Upplägg</h2>
       <p style="margin: 0 0 clamp(30px, 4vw, 42px); max-width: 36em; font-size: 17.5px; line-height: 1.66; color: rgba(18,50,82,0.8); text-wrap: pretty;">Föreläsningen vänder sig till alla medarbetare, oavsett om de känner av stress idag eller inte. Den bygger på stressfysiologi – hur kroppen och hjärnan faktiskt fungerar – och varvar kunskap med konkreta verktyg och reflektion. Innehållet är granskat och rekommenderat av specialistläkare i allmänmedicin.</p>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(16px, 2.2vw, 22px);">
+      <div class="rutor-3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.2vw, 22px);">
         <div style="background: #FBF7EF; border-radius: 18px; padding: clamp(22px, 2.8vw, 30px);">
           <p style="margin: 0 0 10px; font-family: 'Source Serif 4', Georgia, serif; font-size: 22px; line-height: 1; color: #A25A4D;">01</p>
           <h3 style="margin: 0 0 8px; font-size: 18px; font-weight: 600; line-height: 1.3;">Kort inledning</h3>
@@ -229,7 +246,7 @@
     <div style="max-width: 780px; margin: 0 auto; padding: clamp(56px, 9vw, 110px) clamp(18px, 4vw, 40px); text-align: center;">
       <h2 style="margin: 0 0 18px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(28px, 4.4vw, 46px); line-height: 1.1; letter-spacing: -0.02em; text-wrap: balance;">Boka en föreläsning</h2>
       <p style="margin: 0 0 32px; font-size: 17.5px; line-height: 1.66; color: rgba(18,50,82,0.8); text-wrap: pretty;">Berätta hur många ni är och vad ni vill att den ska landa i, så återkommer vi med ett förslag på upplägg och pris inom två arbetsdagar.</p>
-      <a class="plausible-event-name=Forslag" href="fa-ett-forslag.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 60px; padding: 0 44px; background: #123252; color: #FBF7EF; border-radius: 999px; font-size: 17px; font-weight: 600; white-space: nowrap;" class="x1">Få ett förslag</a>
+      <a class="plausible-event-name=Forslag x1" href="fa-ett-forslag.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 60px; padding: 0 44px; background: #123252; color: #FBF7EF; border-radius: 999px; font-size: 17px; font-weight: 600; white-space: nowrap;">Få ett förslag</a>
       <p style="margin: clamp(32px, 4.4vw, 46px) auto 0; padding-top: clamp(28px, 3.6vw, 36px); border-top: 1px solid rgba(18,50,82,0.16); max-width: 34em; font-size: 16.5px; line-height: 1.66; color: rgba(18,50,82,0.74);">Föreläsningen fungerar bra som fristående insats, men är också starten i ett större upplägg med screening, dagligt stöd att lyssna på och ett digitalt program. <a href="for-arbetsgivare.html" style="color: #A25A4D; text-decoration: underline; text-underline-offset: 3px;">Se hela upplägget →</a></p>
     </div>
   </section>
