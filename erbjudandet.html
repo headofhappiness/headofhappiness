@@ -47,6 +47,8 @@
   .del .meta { font-size: 12px; font-weight: 600; color: #A25A4D; margin: 0; }
   .del p.txt { margin: 0; font-size: 13.4px; line-height: 1.5; color: rgba(18,50,82,0.82); }
 
+  .citat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  @media (max-width: 700px) { .citat { grid-template-columns: 1fr; } }
   .tvaboxar { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   @media (max-width: 700px) { .tvaboxar { grid-template-columns: 1fr; } }
   .lattbox { border: 1px solid rgba(191,106,91,0.36); border-radius: 12px; padding: 15px 17px; }
@@ -191,6 +193,33 @@
         <p class="ogon" style="color: #A25A4D; margin-bottom: 5px;">Därefter</p>
         <p style="margin: 0; font-size: 14.5px; line-height: 1.5;">Möjlighet att fortsätta</p>
       </div>
+    </div>
+
+    <p class="ogon" style="color: #A25A4D; margin: clamp(26px, 3.2vw, 34px) 0 8px;">Deltagarnas ord</p>
+    <p style="margin: 0 0 14px; font-size: 17px; font-weight: 500; line-height: 1.44; max-width: 40em;">Lisas digitala föreläsningar har fått mellan 4,5 och 4,8 av 5 i deltagarutvärderingar.</p>
+
+    <div class="citat">
+      <blockquote style="margin: 0; padding: 13px 15px; background: #F2E9D8; border-radius: 10px;">
+        <p style="margin: 0 0 6px; font-family: 'Source Serif 4', Georgia, serif; font-size: 14.5px; line-height: 1.42;">”När Lisa pratar, lyssnar man. Väldigt duktig.”</p>
+        <footer style="font-size: 11.5px; color: rgba(18,50,82,0.62);">Deltagare, föreläsning</footer>
+      </blockquote>
+      <blockquote style="margin: 0; padding: 13px 15px; background: #F2E9D8; border-radius: 10px;">
+        <p style="margin: 0 0 6px; font-family: 'Source Serif 4', Georgia, serif; font-size: 14.5px; line-height: 1.42;">”Tydlig och lätt att ta till sig informationen, helhetsbild som täckte in alla delar, jätteintressant.”</p>
+        <footer style="font-size: 11.5px; color: rgba(18,50,82,0.62);">Deltagare, föreläsning</footer>
+      </blockquote>
+      <blockquote style="margin: 0; padding: 13px 15px; background: #F2E9D8; border-radius: 10px;">
+        <p style="margin: 0 0 6px; font-family: 'Source Serif 4', Georgia, serif; font-size: 14.5px; line-height: 1.42;">”Superbra, man får sig en tankeställare. Mycket givande och intressant.”</p>
+        <footer style="font-size: 11.5px; color: rgba(18,50,82,0.62);">Deltagare, föreläsning</footer>
+      </blockquote>
+    </div>
+
+    <div class="lattbox" style="margin-top: 12px; display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center;">
+      <div>
+        <p class="ogon" style="color: #A25A4D; margin-bottom: 4px;">Medicinsk rådgivare</p>
+        <p style="margin: 0; font-size: 15px; font-weight: 600; line-height: 1.3;">Anders Norman</p>
+        <p style="margin: 0; font-size: 12.5px; color: rgba(18,50,82,0.68);">Specialistläkare i allmänmedicin</p>
+      </div>
+      <p style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 15px; line-height: 1.45; color: #123252;">”I mitt yrke träffar jag nästan dagligen patienter med ohälsa som kan härledas till stress. Med denna grundläggande kunskap kan mycket ohälsa motverkas.”</p>
     </div>
 
     <div class="morkruta" style="margin: clamp(26px, 3.2vw, 34px) 0 0; align-items: center;">
