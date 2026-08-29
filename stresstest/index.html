@@ -629,6 +629,27 @@
   </section>
 
 </div>
+<section style="background: #F2E9D8;" data-screen-label="Håll kontakten">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(44px, 6.5vw, 78px) clamp(18px, 4vw, 40px);">
+      <div style="max-width: 34em;">
+        <p style="margin: 0 0 14px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #A25A4D;">Håll kontakten</p>
+        <h2 style="margin: 0 0 16px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(25px, 3.4vw, 34px); line-height: 1.16; letter-spacing: -0.015em; text-wrap: balance;">Vill du höra mer om stress och återhämtning?</h2>
+        <p style="margin: 0 0 22px; font-size: 17px; line-height: 1.66; color: rgba(18,50,82,0.8); text-wrap: pretty;">Vi skickar då och då något om vad som påverkar hur vi mår och vad man själv kan göra åt det. Inte ofta, och du kan avsluta när du vill.</p>
+        <form class="fangst" action="https://formspree.io/f/xljryoap" method="POST" style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <input type="hidden" name="_subject" value="Anmälan till utskick — stresstest">
+          <input type="hidden" name="kalla" value="stresstest">
+          <input type="email" name="email" required placeholder="din@epost.se" aria-label="Din e-postadress"
+            style="flex: 1 1 220px; min-height: 52px; padding: 0 18px; border: 1px solid rgba(18,50,82,0.22); border-radius: 999px; background: #FBF7EF; color: #123252; font-family: 'Figtree', system-ui, sans-serif; font-size: 16.5px;">
+          <button type="submit"
+            style="flex: 0 0 auto; min-height: 52px; padding: 0 30px; background: #123252; color: #FBF7EF; border: 0; border-radius: 999px; font-family: 'Figtree', system-ui, sans-serif; font-size: 16.5px; font-weight: 600; cursor: pointer;" class="x1">Skicka</button>
+        </form>
+        <p class="fangst-svar" style="margin: 12px 0 0; font-size: 15.5px; color: #2C6B54; min-height: 1.4em;" role="status"></p>
+        <p style="margin: 10px 0 0; font-size: 13.5px; line-height: 1.6; color: rgba(18,50,82,0.68);">Vi använder adressen bara för detta och lämnar den inte vidare. Läs mer i <a href="../integritetspolicy-app/" style="color: #A25A4D; text-decoration: underline; text-underline-offset: 2px;">integritetspolicyn</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  
 
 <footer style="border-top: 1px solid rgba(18,50,82,0.12);">
     <div style="max-width: 1160px; margin: 0 auto; padding: clamp(36px, 5vw, 56px) clamp(18px, 4vw, 40px); display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: clamp(24px, 4vw, 48px); font-size: 15px;">
@@ -793,6 +814,28 @@ function resetForm() {
     var open = n.getAttribute('data-open') === 'true';
     n.setAttribute('data-open', open ? 'false' : 'true');
     t.setAttribute('aria-expanded', open ? 'false' : 'true');
+  });
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('form.fangst').forEach(function(f){
+    var svar = f.parentNode.querySelector('.fangst-svar');
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      var knapp = f.querySelector('button');
+      knapp.disabled = true; svar.style.color = 'rgba(18,50,82,0.7)'; svar.textContent = 'Skickar…';
+      fetch(f.action, { method: 'POST', body: new FormData(f), headers: { 'Accept': 'application/json' } })
+        .then(function(r){
+          if (r.ok) { f.style.display = 'none'; svar.style.color = '#2C6B54'; svar.textContent = 'Tack! Vi hör av oss.'; }
+          else { knapp.disabled = false; svar.style.color = '#A25A4D'; svar.textContent = 'Det gick inte just nu. Försök igen, eller mejla hej@headofhappiness.se.'; }
+        })
+        .catch(function(){
+          knapp.disabled = false; svar.style.color = '#A25A4D';
+          svar.textContent = 'Det gick inte just nu. Försök igen, eller mejla hej@headofhappiness.se.';
+        });
+    });
   });
 })();
 </script>
