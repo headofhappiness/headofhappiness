@@ -75,11 +75,7 @@
     body { background: #FBF7EF; }
     .blad { max-width: none; zoom: 0.71; }
     .sida2 { break-before: page; }
-    .tryckhuvud { display: flex !important; align-items: center; justify-content: space-between; gap: 18px; padding-bottom: 10px; margin-bottom: 18px; border-bottom: 1px solid rgba(18,50,82,0.2); }
-    .th-marke { display: inline-flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #123252; }
-    .th-ruta { display: flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 8px; background: #123252; }
-    .th-ruta img { display: block; width: 15px; height: 15px; object-fit: contain; }
-    .th-hoger { font-size: 11px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(18,50,82,0.6); }
+    .tryckhuvud { display: flex !important; margin: 0 -4mm 20px; }
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
     .ejtryck { display: none !important; }
     .del, .lattbox, .morkruta, .hjalte { break-inside: avoid; }
@@ -169,9 +165,12 @@
       </div>
     </div>
 
-    <div class="tryckhuvud sida2" aria-hidden="true">
-      <span class="th-marke"><span class="th-ruta"><img src="assets/hh-mark.png" alt=""></span>Head of Happiness</span>
-      <span class="th-hoger">Erbjudande till arbetsgivare &middot; sida 2 av 2</span>
+    <div class="topp tryckhuvud sida2" aria-hidden="true">
+      <span class="marke"><span><img src="assets/hh-mark.png" alt="" style="display:block;width:21px;height:21px;object-fit:contain;"></span>Head of Happiness</span>
+      <div style="text-align: right;">
+        <p class="ogon" style="color: #F9E0A9;">Erbjudande till arbetsgivare</p>
+        <span style="font-size: 13px; color: rgba(251,247,239,0.8);">headofhappiness.se &middot; sida 2 av 2</span>
+      </div>
     </div>
     <div class="tvaboxar" style="margin-top: 12px;">
       <div class="lattbox">
