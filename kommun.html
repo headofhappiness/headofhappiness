@@ -31,6 +31,8 @@
   .knapp-ljus:hover { background: #FBF7EF; color: #123252; }
   .prisrad-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; }
   @media (max-width: 860px) { .prisrad-grid { grid-template-columns: 1fr !important; } }
+  .bevisrad { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: clamp(24px, 4vw, 56px); align-items: start; }
+  @media (max-width: 760px) { .bevisrad { grid-template-columns: 1fr; gap: 28px; } }
   .tre { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
   @media (max-width: 860px) { .tre { grid-template-columns: 1fr; } }
   .ruta { background: #FBF7EF; border-radius: 14px; padding: clamp(20px, 2.6vw, 28px); }
@@ -140,16 +142,17 @@
 
   <section style="background: #F9E0A9;" data-screen-label="Bevis">
     <div class="inner" style="padding-top: clamp(38px, 5vw, 60px); padding-bottom: clamp(38px, 5vw, 60px);">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(22px, 3.4vw, 46px); align-items: center;">
+      <div class="bevisrad">
         <div>
-          <p class="ogon" style="margin-bottom: 10px;">Medicinsk rådgivare</p>
-          <p style="margin: 0 0 14px; font-family: 'Source Serif 4', Georgia, serif; font-size: clamp(18px, 2.2vw, 22px); line-height: 1.45;">”I mitt yrke träffar jag nästan dagligen patienter med ohälsa som kan härledas till stress. Med denna grundläggande kunskap kan mycket ohälsa motverkas.”</p>
+          <p class="ogon" style="margin-bottom: 12px;">Medicinsk rådgivare</p>
+          <p style="margin: 0 0 16px; font-family: 'Source Serif 4', Georgia, serif; font-size: clamp(17px, 2vw, 20px); line-height: 1.48;">”I mitt yrke träffar jag nästan dagligen patienter med ohälsa som kan härledas till stress. Med denna grundläggande kunskap kan mycket ohälsa motverkas.”</p>
           <p style="margin: 0; font-size: 15.5px; font-weight: 600;">Anders Norman</p>
           <p style="margin: 0; font-size: 14px; color: rgba(18,50,82,0.68);">Specialistläkare i allmänmedicin</p>
         </div>
         <div>
-          <p class="ogon" style="margin-bottom: 10px;">Deltagarnas ord</p>
-          <p style="margin: 0; font-size: 17px; font-weight: 500; line-height: 1.55;">Lisas digitala föreläsningar har fått mellan 4,5 och 4,8 av 5 i deltagarutvärderingar.</p>
+          <p class="ogon" style="margin-bottom: 12px;">Deltagarnas ord</p>
+          <p style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: clamp(40px, 6vw, 58px); line-height: 1; letter-spacing: -0.02em;">4,5–4,8</p>
+          <p style="margin: 8px 0 0; font-size: 16px; line-height: 1.5; color: rgba(18,50,82,0.78);">av 5 i deltagarutvärderingar<br>av Lisas digitala föreläsningar</p>
         </div>
       </div>
     </div>
