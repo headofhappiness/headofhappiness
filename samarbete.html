@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Samarbete – Head of Happiness</title>
+<meta name="description" content="Head of Happiness som förebyggande innehåll i era befintliga kundrelationer. För företagshälsor och vårdaktörer.">
+<meta property="og:title" content="För arbetsgivare – Head of Happiness">
+<meta property="og:description" content="Föreläsning, screening och digitalt program som ger medarbetarna kunskap och verktyg mot stress.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300..500;1,8..60,300..400&amp;display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: #FBF7EF; font-family: 'Figtree', system-ui, -apple-system, sans-serif; color: #123252; }
+  * { box-sizing: border-box; }
+  a { color: #123252; text-decoration: none; }
+  a:hover { color: #BF6A5B; }
+  .nav-toggle { display: none; }
+  .hm-hjul { position: relative; width: 100%; max-width: 520px; margin: 0 auto; aspect-ratio: 1; }
+  .hm-ring { position: absolute; left: 50%; top: 50%; width: 76%; height: 76%; transform: translate(-50%, -50%); border: 1px solid rgba(191,106,91,0.4); border-radius: 50%; }
+  .hm-mitt { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; text-align: center; width: 42%; height: 42%; margin: 0; background: #123252; color: #F9E0A9; border-radius: 50%; font-family: 'Source Serif 4', Georgia, serif; font-size: clamp(17px, 2.6vw, 23px); line-height: 1.2; padding: 8px; }
+  .hm-prick { display: none; }
+  .hm-lista { list-style: none; margin: 0; padding: 0; }
+  .hm-omrade { position: absolute; transform: translate(-50%, -50%); background: #F9E0A9; color: #123252; border-radius: 999px; padding: 9px 16px; font-size: clamp(13px, 1.5vw, 15.5px); font-weight: 500; line-height: 1.25; white-space: normal; max-width: 10em; text-align: center; }
+@media (max-width: 720px) {
+    .hm-hjul { --ring: 232px; --ringmitt: 130px; position: relative; display: block; aspect-ratio: auto; max-width: 420px; padding-top: 252px; }
+    .hm-ring { display: block; width: calc(var(--ring) * 0.76); height: calc(var(--ring) * 0.76); left: 50%; top: var(--ringmitt); transform: translate(-50%, -50%); }
+    .hm-mitt { position: absolute; left: 50%; top: var(--ringmitt); transform: translate(-50%, -50%); width: calc(var(--ring) * 0.46); height: calc(var(--ring) * 0.46); padding: 6px; font-size: 14px; line-height: 1.15; border-radius: 50%; }
+    .hm-lista { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 18px; width: 100%; }
+    .hm-omrade { position: static; transform: none; background: none; color: #123252; border-radius: 0; padding: 7px 0; max-width: none; min-height: 0; text-align: left; font-size: 14.5px; display: flex; align-items: center; gap: 10px; }
+    .hm-omrade:last-child { grid-column: auto; width: auto; margin: 0; }
+    .hm-prick { display: block; flex: 0 0 auto; width: 11px; height: 11px; border-radius: 50%; background: var(--f); }
+    .hm-omrade::before {
+      content: ""; position: absolute; width: 15px; height: 15px; border-radius: 50%;
+      background: var(--f); transform: translate(-50%, -50%);
+      left: calc(50% + (var(--nx) - 50) * var(--ring) / 100);
+      top: calc(var(--ringmitt) + (var(--ny) - 50) * var(--ring) / 100);
+    }
+  }
+  .tidslinje { grid-template-columns: 1fr auto 1fr auto 1fr; }
+  @media (max-width: 780px) { .tidslinje { grid-template-columns: 1fr; } .tidslinje .pil { display: none; } }
+  .fact-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  @media (max-width: 1060px) { .fact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 560px) { .fact-grid { grid-template-columns: 1fr; } }
+  .nav-links > a { white-space: nowrap; }
+  @media (max-width: 1000px) {
+    .nav-links { display: none !important; }
+    .nav-links[data-open="true"] { display: flex !important; flex-direction: column; align-items: flex-start; gap: 4px; position: absolute; top: 100%; left: 0; right: 0; padding: 14px clamp(18px, 4vw, 40px) 22px; background: #FBF7EF; border-bottom: 1px solid rgba(18,50,82,0.12); }
+    .nav-toggle { display: inline-flex; }
+  }
+
+  @media (max-width: 400px) { .hh-logo { font-size: 13.5px !important; letter-spacing: 0.06em !important; gap: 9px !important; } }
+  .logo-krymp { }
+  @media (min-width: 760px) { .bild-vanster > div:last-child { order: -1; } }
+  @media (max-width: 430px) { header a[href*="fa-ett-forslag"] { display: none !important; } }
+  .triad { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 0 0 clamp(20px, 2.6vw, 28px); font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #A25A4D; }
+  .triad span[aria-hidden] { opacity: 0.5; font-weight: 400; }
+</style>
+<style>
+.x1:hover { background: #1B4571; color: #FBF7EF; }
+.x2:hover { background: #1B4571; color: #FBF7EF; }
+.x3:hover { color: #123252; }
+.x4:hover { color: #BF6A5B; }
+.x5:hover { background: #123252; color: #FBF7EF; }
+.x6:hover { background: #FBF7EF; color: #123252; }
+</style>
+<link rel="canonical" href="https://www.headofhappiness.se/for-arbetsgivare.html">
+<meta property="og:url" content="https://www.headofhappiness.se/for-arbetsgivare.html">
+<meta property="og:image" content="https://www.headofhappiness.se/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Head of Happiness">
+<meta property="og:locale" content="sv_SE">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "provider": {
+    "@id": "https://www.headofhappiness.se/#organisation"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Sverige"
+  },
+  "@type": "Service",
+  "name": "Head of Happiness för arbetsgivare",
+  "description": "Screening, föreläsning, digitalt program och dagligt stöd att lyssna på i mobilen. Ett sammanhängande system för medarbetares stresshantering och välmående.",
+  "serviceType": "Friskvård och hälsofrämjande insatser för arbetsgivare"
+}
+</script>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-raRUmoFYTv2e2FKNU4i5I.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init({ outboundLinks: true, fileDownloads: true, formSubmissions: true })
+</script>
+</head>
+<body>
+
+
+
+<div style="background: #FBF7EF; color: #123252; font-family: 'Figtree', system-ui, sans-serif; font-weight: 400; line-height: 1.6; overflow-x: hidden;">
+
+  <header style="position: sticky; top: 0; z-index: 20; background: rgba(251,247,239,0.93); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(18,50,82,0.1);">
+    <div style="max-width: 1160px; margin: 0 auto; padding: 13px clamp(18px, 4vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 18px;">
+      <a href="index.html" class="hh-logo" style="display: inline-flex; align-items: center; gap: 11px; font-weight: 600; font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap;">
+        <span style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 11px; background: #123252;"><img src="assets/hh-mark.png" alt="" style="display: block; width: 22px; height: 22px; object-fit: contain;"></span>
+        Head of Happiness
+      </a>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <nav class="nav-links" data-open="false" style="display: flex; align-items: center; gap: clamp(13px, 1.8vw, 24px); font-size: 15px;">
+          <a href="for-arbetsgivare.html" style="min-height: 44px; display: inline-flex; align-items: center;">För arbetsgivare</a>
+          <a href="starta.html" style="min-height: 44px; display: inline-flex; align-items: center;">För dig själv</a>
+          <a href="om-oss.html" style="min-height: 44px; display: inline-flex; align-items: center;">Om oss</a>
+          <a href="varfor-investera.html" style="min-height: 44px; display: inline-flex; align-items: center;">Varför investera</a>
+        </nav>
+        <a href="fa-ett-forslag.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; background: #123252; color: #FBF7EF; border-radius: 999px; font-size: 14.5px; font-weight: 600; white-space: nowrap;" class="x1">Få ett förslag</a>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" type="button" aria-label="Meny" style="align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid rgba(18,50,82,0.2); border-radius: 999px; background: transparent; color: #123252; font-size: 17px; cursor: pointer;">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="max-width: 1160px; margin: 0 auto; padding: clamp(44px, 7vw, 88px) clamp(18px, 4vw, 40px) clamp(48px, 7vw, 88px); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(30px, 5vw, 64px); align-items: center;">
+    <div>
+      <p style="margin: 0 0 18px; display: inline-flex; align-items: center; padding: 7px 16px; background: #F9E0A9; border-radius: 999px; font-size: 12.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #123252;">För samarbetspartners</p>
+      <h1 style="margin: 0 0 22px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(32px, 5.2vw, 54px); line-height: 1.1; letter-spacing: -0.018em; text-wrap: balance;">Ni har kunderna.<br>Vi har innehållet.</h1>
+      <p style="margin: 0 0 30px; max-width: 30em; font-size: clamp(17px, 2vw, 19px); line-height: 1.68; color: rgba(18,50,82,0.8); text-wrap: pretty;">Head of Happiness stärker individens vilja och förmåga att ta hand om sig själv och påverka sitt mående. För er som redan har relationerna med arbetsgivarna kan vi bli en förebyggande del av det ni levererar — utan att ni släpper kunden.</p>
+      <a href="mailto:lisa@headofhappiness.se?subject=Samarbete" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 32px; background: #123252; color: #FBF7EF; border-radius: 999px; font-size: 16.5px; font-weight: 600;">Hör av dig</a>
+      <p style="margin: 14px 0 0; font-size: 15px; color: rgba(18,50,82,0.68);">Ett kort samtal räcker för att se om det finns något här.</p>
+    </div>
+    <div>
+      <img src="assets/lisa-portratt.jpg" alt="Lisa Jonsson, grundare av Head of Happiness" loading="eager" style="width: 100%; border-radius: 20px; display: block; object-fit: cover; aspect-ratio: 4/3;">
+    </div>
+  </section>
+
+  <section data-screen-label="Så kan ett samarbete se ut" style="background: #F2E9D8;">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) clamp(18px, 4vw, 40px);">
+      <p style="margin: 0 0 16px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #A25A4D;">Så kan det se ut</p>
+      <h2 style="margin: 0 0 clamp(30px, 5vw, 48px); font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(27px, 4vw, 42px); line-height: 1.14; letter-spacing: -0.015em; max-width: 20em; text-wrap: balance;">Ett samarbete som inte kostar er kundrelationen</h2>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: clamp(16px, 2.5vw, 22px);">
+        <div style="background: #FBF7EF; border-radius: 18px; padding: clamp(24px, 3vw, 32px);">
+          <h3 style="margin: 0 0 10px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(20px, 2.3vw, 25px); line-height: 1.2;">Ni äger kunden</h3>
+          <p style="margin: 0; font-size: 16.5px; line-height: 1.62; color: rgba(18,50,82,0.76); text-wrap: pretty;">Avtalet och relationen är er. Vi kommer in som innehåll i något ni redan har, inte som ännu en leverantör kunden ska förhålla sig till.</p>
+        </div>
+        <div style="background: #FBF7EF; border-radius: 18px; padding: clamp(24px, 3vw, 32px);">
+          <h3 style="margin: 0 0 10px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(20px, 2.3vw, 25px); line-height: 1.2;">Helt eller i delar</h3>
+          <p style="margin: 0; font-size: 16.5px; line-height: 1.62; color: rgba(18,50,82,0.76); text-wrap: pretty;">Föreläsningen kan stå för sig själv. Screeningen likaså. Vill ni ha hela systemet finns det.</p>
+        </div>
+        <div style="background: #FBF7EF; border-radius: 18px; padding: clamp(24px, 3vw, 32px);">
+          <h3 style="margin: 0 0 10px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(20px, 2.3vw, 25px); line-height: 1.2;">Egen uppsättning per kund</h3>
+          <p style="margin: 0; font-size: 16.5px; line-height: 1.62; color: rgba(18,50,82,0.76); text-wrap: pretty;">Varje kundföretag kan få ett eget program med egen kod. Det stängs när avtalet tar slut, och resultaten hålls isär.</p>
+        </div>
+        <div style="background: #FBF7EF; border-radius: 18px; padding: clamp(24px, 3vw, 32px);">
+          <h3 style="margin: 0 0 10px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(20px, 2.3vw, 25px); line-height: 1.2;">Anpassat innehåll</h3>
+          <p style="margin: 0; font-size: 16.5px; line-height: 1.62; color: rgba(18,50,82,0.76); text-wrap: pretty;">Frågor, återkoppling, exempel och tonläge utformas efter kunden — och efter vad ni erbjuder, så att den som svarar får ett naturligt nästa steg hos er.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Vad vi inte är" style="max-width: 1160px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) clamp(18px, 4vw, 40px);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(30px, 5vw, 64px); align-items: start;">
+      <div>
+        <p style="margin: 0 0 16px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #A25A4D;">Vad vi inte är</p>
+        <h2 style="margin: 0 0 22px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(27px, 4vw, 42px); line-height: 1.14; letter-spacing: -0.015em; max-width: 20em; text-wrap: balance;">Vi ersätter ingenting ni redan gör</h2>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px; max-width: 32em; font-size: clamp(17px, 2vw, 19px); line-height: 1.68; color: rgba(18,50,82,0.8);">
+        <p style="margin: 0; text-wrap: pretty;">Head of Happiness ersätter inte vård, rehabilitering eller er egen kompetens. Vi gör inga bedömningar och ställer inga diagnoser.</p>
+        <p style="margin: 0; text-wrap: pretty;">Vi arbetar med det individen själv kan påverka: kunskap om vad som belastar, verktyg att använda i vardagen och stöd för att det ska bli gjort. När någon behöver mer än så är det er insats som gäller.</p>
+        <p style="margin: 0; font-weight: 500; color: #123252; text-wrap: pretty;">Innehållet är granskat och rekommenderat av specialistläkare i allmänmedicin.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Innehållet" style="background: #F2E9D8;">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) clamp(18px, 4vw, 40px);">
+      <h2 style="margin: 0 0 16px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(27px, 4vw, 42px); line-height: 1.14; letter-spacing: -0.015em;">Fyra delar som tillsammans blir ett system</h2>
+      <p style="margin: 0 0 clamp(32px, 5vw, 52px); max-width: 38em; font-size: 17.5px; line-height: 1.66; color: rgba(18,50,82,0.76); text-wrap: pretty;">Vi väcker viljan att ta hand om sig själv, stärker förmågan genom kunskap och konkreta verktyg — och ger stöd så att det faktiskt blir gjort i vardagen.</p>
+
+      <div style="display: flex; flex-direction: column; gap: clamp(14px, 2vw, 18px);">
+        <div style="background: #FBF7EF; border-radius: 18px; padding: clamp(24px, 3vw, 36px); display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(18px, 3vw, 44px); align-items: start;">
+          <div>
+            <p style="margin: 0 0 12px; display: inline-flex; align-items: center; padding: 6px 14px; background: #123252; border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #F9E0A9;">För alla</p>
+            <h3 style="margin: 0 0 8px; display: flex; align-items: baseline; gap: 14px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(22px, 2.6vw, 29px); line-height: 1.18;"><span style="font-size: 0.7em; color: #BF6A5B;">1</span>Föreläsning</h3>
+            <p style="margin: 0; font-size: 15.5px; font-weight: 600; color: rgba(18,50,82,0.68);">2 timmar · på plats eller digitalt</p>
+          </div>
+          <p style="margin: 0; font-size: 16.5px; line-height: 1.64; color: rgba(18,50,82,0.78); text-wrap: pretty;">Alla får samma grund samtidigt: hur stress fungerar och vad man själv kan påverka. Syftet är att väcka viljan och lusten att ta hand om sig själv — och att skapa en relation som bär vidare in i resten.</p>
+        </div>
+
+        <div style="background: #FBF7EF; border-radius: 18px; padding: clamp(24px, 3vw, 36px); display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(18px, 3vw, 44px); align-items: start;">
+          <div>
+            <p style="margin: 0 0 12px; display: inline-flex; align-items: center; padding: 6px 14px; background: #123252; border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #F9E0A9;">För alla</p>
+            <h3 style="margin: 0 0 8px; display: flex; align-items: baseline; gap: 14px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(22px, 2.6vw, 29px); line-height: 1.18;"><span style="font-size: 0.7em; color: #BF6A5B;">2</span>Screening</h3>
+            <p style="margin: 0; font-size: 15.5px; font-weight: 600; color: rgba(18,50,82,0.68);">Kort och anonym · utgår från KEDS och WHO-5</p>
+          </div>
+          <p style="margin: 0; font-size: 16.5px; line-height: 1.64; color: rgba(18,50,82,0.78); text-wrap: pretty;">Individen får personlig återkoppling, arbetsgivaren en samlad bild på gruppnivå. Ingen enskild medarbetare kan identifieras. Frågor och återkoppling kan anpassas efter era önskemål.</p>
+        </div>
+
+        <div style="background: #FBF7EF; border-radius: 18px; padding: clamp(24px, 3vw, 36px); display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(18px, 3vw, 44px); align-items: start;">
+          <div>
+            <p style="margin: 0 0 12px; display: inline-flex; align-items: center; padding: 6px 14px; background: #BF6A5B; border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #FBF7EF;">Frivilligt</p>
+            <h3 style="margin: 0 0 8px; display: flex; align-items: baseline; gap: 14px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(22px, 2.6vw, 29px); line-height: 1.18;"><span style="font-size: 0.7em; color: #BF6A5B;">3</span>Dagligt stöd</h3>
+            <p style="margin: 0; font-size: 15.5px; font-weight: 600; color: rgba(18,50,82,0.68);">1–10 minuter om dagen · i mobilen</p>
+          </div>
+          <p style="margin: 0; font-size: 16.5px; line-height: 1.64; color: rgba(18,50,82,0.78); text-wrap: pretty;">Korta övningar att lyssna på under kortare perioder. Hjälper till att omsätta kunskap i handling och skapa små förändringar som håller över tid.</p>
+        </div>
+
+        <div style="background: #FBF7EF; border-radius: 18px; padding: clamp(24px, 3vw, 36px); display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(18px, 3vw, 44px); align-items: start;">
+          <div>
+            <p style="margin: 0 0 12px; display: inline-flex; align-items: center; padding: 6px 14px; background: #BF6A5B; border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #FBF7EF;">Frivilligt</p>
+            <h3 style="margin: 0 0 8px; display: flex; align-items: baseline; gap: 14px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(22px, 2.6vw, 29px); line-height: 1.18;"><span style="font-size: 0.7em; color: #BF6A5B;">4</span>Utbildnings- och träningsprogram</h3>
+            <p style="margin: 0; font-size: 15.5px; font-weight: 600; color: rgba(18,50,82,0.68);">Digitalt · i egen takt</p>
+          </div>
+          <p style="margin: 0; font-size: 16.5px; line-height: 1.64; color: rgba(18,50,82,0.78); text-wrap: pretty;">Kunskap, reflektion, övningar och konkreta verktyg inom områden som påverkar hur vi mår. Från januari 2027 även digitala live-träffar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Upplägg och ersättning" style="background: #F9E0A9;">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) clamp(18px, 4vw, 40px);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(30px, 5vw, 64px); align-items: start;">
+        <div>
+          <p style="margin: 0 0 16px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #A25A4D;">Upplägg och ersättning</p>
+          <h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(27px, 4vw, 42px); line-height: 1.14; letter-spacing: -0.015em; max-width: 18em; text-wrap: balance;">Vi har inga låsta modeller</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 16px; max-width: 32em; font-size: clamp(17px, 2vw, 19px); line-height: 1.68; color: rgba(18,50,82,0.82);">
+          <p style="margin: 0; text-wrap: pretty;">Hur ett samarbete sätts upp kommersiellt tar vi fram tillsammans. Det beror på vad ni vill erbjuda, till vilka och i vilken omfattning.</p>
+          <p style="margin: 0; font-weight: 500; color: #123252; text-wrap: pretty;">Utgångspunkten är enkel: det ska vara värt det för båda parter, annars blir det inget bra samarbete.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Slutgiltig CTA" style="background: #123252; color: #FBF7EF;">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) clamp(18px, 4vw, 40px); text-align: center;">
+      <h2 style="margin: 0 0 18px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(27px, 4vw, 44px); line-height: 1.14; letter-spacing: -0.015em; text-wrap: balance;">Ett första steg</h2>
+      <p style="margin: 0 auto 34px; max-width: 26em; font-size: clamp(17px, 2vw, 19px); line-height: 1.62; color: rgba(251,247,239,0.8); text-wrap: pretty;">En halvtimme digitalt, för att börja lära känna varandra och se om det finns något här. Ingen presentation som måste sitta, inget som ska beslutas.</p>
+      <a href="mailto:lisa@headofhappiness.se?subject=Samarbete" style="display: inline-flex; align-items: center; justify-content: center; min-height: 60px; padding: 0 44px; background: #F9E0A9; color: #123252; border-radius: 999px; font-size: 17.5px; font-weight: 600;">Skriv till Lisa</a>
+      <p style="margin: 22px 0 0; font-size: 16px; color: rgba(251,247,239,0.75);">Eller ring direkt: <a href="tel:+46708200894" style="color: #F9E0A9; text-decoration: underline;">0708 200 894</a></p>
+    </div>
+  </section>
+  <footer style="border-top: 1px solid rgba(18,50,82,0.12);">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(36px, 5vw, 56px) clamp(18px, 4vw, 40px); display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: clamp(24px, 4vw, 48px); font-size: 15px;">
+      <div>
+        <p style="margin: 0 0 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; font-size: 13px;">Head of Happiness</p>
+        <p style="margin: 0; color: rgba(18,50,82,0.68); line-height: 1.6;">hej@headofhappiness.se<br>0708 200894</p>
+      </div>
+      <nav style="display: flex; flex-direction: column; gap: 9px;">
+        <a href="for-arbetsgivare.html">För arbetsgivare</a>
+        <a href="starta.html">För dig själv</a>
+        <a href="fa-ett-forslag.html">Få ett förslag</a>
+      </nav>
+      <nav style="display: flex; flex-direction: column; gap: 9px;">
+        <a href="om-oss.html">Om oss</a>
+        <a href="varfor-investera.html">Varför investera</a>
+        <a href="halsosamtal.html">Hälsosamtal</a>
+      </nav>
+      <nav data-legal-nav style="display: flex; flex-direction: column; gap: 9px;">
+        <a href="anvandarvillkor/">Användarvillkor</a>
+        <a href="integritetspolicy-app/">Integritetspolicy app</a>
+        <a href="cookiepolicy/">Cookiepolicy</a>
+        <a href="leveransvillkor/">Leveransvillkor</a>
+        <a href="returpolicy/">Returpolicy</a>
+      </nav>
+      <p style="margin: 0; color: rgba(18,50,82,0.45); font-size: 13.5px; line-height: 1.6;">Head of Happiness AB<br>556834-4518</p>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var t=document.querySelector('[data-nav-toggle]'), n=document.querySelector('.nav-links');
+  if(!t||!n) return;
+  t.addEventListener('click', function(){
+    var open = n.getAttribute('data-open')==='true';
+    n.setAttribute('data-open', open?'false':'true');
+    t.setAttribute('aria-expanded', open?'false':'true');
+    t.textContent = open ? '\u2630' : '\u2715';
+  });
+})();
+</script>
+</body>
+</html>
