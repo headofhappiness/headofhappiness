@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Head of Happiness för Fridlef</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Figtree:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --ground: #FBF7EF;
+    --card: #FFFFFF;
+    --ink: #123252;
+    --muted: #5C7590;
+    --accent: #BF6A5B;
+    --gold: #EFC98E;
+    --rule: rgba(18, 50, 82, 0.13);
+    --markering: #F6D8A4;
+    --shadow: 0 1px 3px rgba(18, 50, 82, 0.07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #101F31;
+      --card: #1A2E45;
+      --ink: #F3ECE1;
+      --muted: #9DB2C6;
+      --accent: #E09986;
+      --gold: #EFC98E;
+      --markering: rgba(239, 201, 142, 0.26);
+      --rule: rgba(243, 236, 225, 0.16);
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.30);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #101F31;
+    --card: #1A2E45;
+    --ink: #F3ECE1;
+    --muted: #9DB2C6;
+    --accent: #E09986;
+    --gold: #EFC98E;
+    --markering: rgba(239, 201, 142, 0.26);
+    --rule: rgba(243, 236, 225, 0.16);
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.30);
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .wrap {
+    max-width: 34rem;
+    margin: 0 auto;
+    padding: clamp(36px, 7vw, 72px) clamp(20px, 5vw, 32px) 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+  }
+
+  /* Rubrikblock */
+  .topp { display: flex; flex-direction: column; gap: 18px; }
+  .logotyp {
+    display: flex; align-items: center; gap: 14px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .platta {
+    width: 46px; height: 46px; border-radius: 12px;
+    background: #123252;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .platta svg { width: 26px; height: 26px; display: block; }
+  .ordmark {
+    font-size: clamp(0.82rem, 3vw, 0.95rem);
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-weight: 300;
+    font-size: clamp(2.1rem, 7vw, 3rem);
+    line-height: 1.12;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .ingress { margin: 0; color: var(--muted); }
+
+  /* Materialkort */
+  .material { display: flex; flex-direction: column; gap: 14px; }
+  .rubrik {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--muted);
+    padding-bottom: 10px; border-bottom: 1px solid var(--rule);
+  }
+  .ordning {
+    margin: -2px 0 4px;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .kort {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 22px 24px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .kort .rad {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 14px;
+  }
+  .kort h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 400; font-size: 1.45rem; line-height: 1.35; margin: 0;
+    background: var(--markering);
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 4px 18px;
+  }
+  .tid {
+    font-size: 0.76rem; color: var(--muted); white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .kort p { margin: 0; font-size: 0.94rem; color: var(--muted); }
+  .steg {
+    margin: 4px 0 0;
+    padding-left: 1.25em;
+    display: flex; flex-direction: column; gap: 5px;
+    font-size: 0.94rem; color: var(--muted);
+  }
+  .steg li::marker { color: var(--accent); font-weight: 600; }
+  .steg b { color: var(--ink); font-weight: 600; }
+  .kodtext {
+    background: var(--ground);
+    border-radius: 6px;
+    padding: 2px 8px;
+    letter-spacing: 0.04em;
+    font-variant-numeric: tabular-nums;
+  }
+  .obs {
+    font-size: 0.88rem !important;
+    background: var(--ground);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-top: 4px !important;
+  }
+  .obs b { color: var(--ink); font-weight: 600; }
+  .mobil { font-size: 0.94rem !important; }
+  .mobil b { color: var(--ink); font-weight: 600; }
+  .mobil-sist {
+    font-size: 0.88rem !important;
+    border-top: 1px solid var(--rule);
+    padding-top: 14px;
+    margin-top: 10px !important;
+  }
+  .knapp {
+    align-self: flex-start;
+    margin-top: 4px;
+    font-size: 0.92rem; font-weight: 600;
+    color: var(--accent); text-decoration: none;
+  }
+  .knapp.stor {
+    background: var(--accent);
+    color: #fff;
+    padding: 11px 20px;
+    border-radius: 9px;
+    margin-top: 8px;
+  }
+  .knapp.stor:hover { text-decoration: none; opacity: 0.9; }
+  .etikett {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.13em;
+    text-transform: uppercase; color: var(--muted);
+    margin-top: 12px;
+  }
+  .knapp:hover { text-decoration: underline; }
+  .knapp:focus-visible {
+    outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px;
+  }
+
+  /* Notruta */
+  .not {
+    background: var(--card);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 12px 12px 0;
+    padding: 20px 24px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .not strong { font-size: 0.92rem; }
+  .not p { margin: 0; font-size: 0.92rem; color: var(--muted); }
+
+  .tankar { display: flex; flex-direction: column; gap: 12px; }
+  .omraden {
+    margin: 0;
+    padding-left: 1.15em;
+    display: flex; flex-direction: column; gap: 7px;
+    font-size: 0.96rem; color: var(--ink);
+  }
+  .omraden li::marker { color: var(--gold); }
+
+  /* Avslut */
+  .kontakt {
+    border-top: 1px solid var(--rule);
+    padding-top: 24px;
+    display: flex; flex-direction: column; gap: 3px;
+  }
+  .kontakt .namn { font-weight: 600; }
+  .kontakt .roll { color: var(--muted); font-size: 0.94rem; }
+  .kontakt a { color: var(--accent); text-decoration: none; width: fit-content; font-size: 0.94rem; }
+  .kontakt a:hover { text-decoration: underline; }
+  .kontakt a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+  .spar { margin-top: 18px; font-size: 0.78rem; color: var(--muted); }
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+
+  <header class="topp">
+    <div class="logotyp">
+      <span class="platta">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Head of Happiness">
+          <rect x="0" y="21" width="34" height="79" fill="#DD9C88"></rect>
+          <rect x="66" y="21" width="34" height="79" fill="#DD9C88"></rect>
+          <path d="M17 0 V11 A33 33 0 0 0 83 11 V0" fill="none" stroke="#F7D6A0" stroke-width="34"></path>
+        </svg>
+      </span>
+      <span class="ordmark">Head of Happiness</span>
+    </div>
+    <h1>För Fridlef Vårdcentral</h1>
+    <p class="ingress">Head of Happiness stärker individens vilja och förmåga att ta hand om sig själv och påverka sitt mående. Systemet kombinerar föreläsning, screening, nudging och digitalt program, och kan användas helt eller i delar.</p>
+  </header>
+
+  <section class="material">
+    <div class="rubrik">Att titta på</div>
+    <p class="ordning">Här är materialet samlat, så du kan titta i lugn och ro. Ta det i den ordning du vill — har du bara några minuter är screeningen snabbast att få en känsla av.</p>
+
+    <article class="kort">
+      <div class="rad">
+        <h2>Screeningen</h2>
+        <span class="tid">3 min</span>
+      </div>
+      <p>Gör den själv, precis som en medarbetare skulle göra. Anonym, inga personuppgifter.</p>
+      <p>Vid ett samarbete kan vi anpassa frågor och återkoppling efter era önskemål.</p>
+      <a class="knapp" href="https://headofhappiness.github.io/demo/?org=fridlef" target="_blank" rel="noopener noreferrer">Öppna screeningen →</a>
+    </article>
+
+    <article class="kort">
+      <div class="rad">
+        <h2>Det digitala programmet</h2>
+        <span class="tid">kika runt</span>
+      </div>
+      <p>För den som vill fördjupa sig och fortsätta arbeta med sitt välmående. Kunskap, reflektion, övningar och konkreta verktyg inom områden som påverkar hur vi mår. Från januari 2027 även digitala live-träffar.</p>
+      <p>Varje kund kan få en egen uppsättning av programmet så innehållet kan justeras efter era önskemål. Är det till enskilda individer finns redan ett färdigt program. Det går att använda både på datorn och i appen.</p>
+      <a class="knapp stor" href="https://boka.headofhappiness.se/challenge-page/fd149be0-cf49-496b-987f-52bbf8df8df1" target="_blank" rel="noopener noreferrer">Öppna programmet →</a>
+      <div class="etikett">På datorn — på sidan som öppnas</div>
+      <ol class="steg">
+        <li>Klicka <b>Jag vill delta</b></li>
+        <li>Registrera dig med din e-postadress</li>
+        <li>Ange kupongkoden <b class="kodtext">demo2026</b> i rutan <b>Ange en kupongkod</b> till höger och klicka <b>Använd</b></li>
+        <li>Klicka <b>Gå med i program</b></li>
+      </ol>
+      <p class="obs">Priset 2 495 kr visas innan koden är inlagd — det är som det ska. När koden är använd står det 0 kr.</p>
+      <div class="etikett">I mobilen</div>
+      <p class="mobil">Ladda ner appen <b>Head of Happiness</b> och välj programmet som heter <b>DEMO Från stress till lugn, lust &amp; kraft</b> — det ligger ett program till med nästan samma namn.</p>
+      <p class="mobil-sist">Börja där du vill, dator eller app spelar ingen roll. Registrera dig med samma e-postadress första gången du loggar in, så kommer programmet ihåg dig och du hittar tillbaka från båda.</p>
+    </article>
+
+    <article class="kort">
+      <div class="rad">
+        <h2>Föreläsningen</h2>
+        <span class="tid">2 tim live</span>
+      </div>
+      <p>Syftet är att väcka viljan och lusten att ta hand om sig själv, ge kunskap — och skapa en relation. Det är mig deltagarna möter igen i programmet och i nudgingen. Väljer de att gå vidare, till exempel till ett hälsosamtal, finns förtroendet redan där.</p>
+      <p>Hela underlaget ligger här, så du ser hur helheten hänger ihop. Föreläsningen tar två timmar när jag håller den — bläddra som du vill, du behöver inte läsa allt.</p>
+      <p>Det här är en demoversion. Föreläsningen anpassas alltid efter kund, önskemål och bransch — innehåll, exempel och tonläge sätts utifrån vilka som sitter i rummet.</p>
+      <a class="knapp" href="https://claude.ai/code/artifact/c6d48f63-eb40-4d91-83a7-83f7de539377" target="_blank" rel="noopener noreferrer">Öppna föreläsningen →</a>
+    </article>
+  </section>
+
+  <aside class="not">
+    <strong>Om materialet</strong>
+    <p>Länken är öppen ett par veckor. Hör av dig om du vill ha mer tid, så förlänger jag.</p>
+    <p>Jag uppskattar om materialet stannar hos er och inte används vidare utan att vi stämmer av först.</p>
+  </aside>
+
+  <section class="tankar">
+    <div class="rubrik">Möjliga samarbetsområden</div>
+    <ul class="omraden">
+      <li>Förebyggande insatser till era företagskunder</li>
+      <li>Stöd till enskilda individer</li>
+      <li>Upplägg vi utformar tillsammans, utifrån vad ni ser att era kunder behöver</li>
+    </ul>
+  </section>
+
+  <footer class="kontakt">
+    <div class="namn">Lisa Jonsson</div>
+    <div class="roll">Grundare, Head of Happiness</div>
+    <a href="mailto:lisa@headofhappiness.se">lisa@headofhappiness.se</a>
+    <a href="tel:+46708200894">+46 708 200 894</a>
+    <a href="https://www.headofhappiness.se" target="_blank" rel="noopener noreferrer">www.headofhappiness.se</a>
+    <div class="spar">Sammanställd för Fridlef Vårdcentral, september 2026.</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
