@@ -43,14 +43,8 @@
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init({ outboundLinks: true, fileDownloads: true, formSubmissions: true })
 </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3QL8BHB1B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-  gtag("config", "G-Q3QL8BHB1B");
-</script>
+<!-- Analys: GA laddas forst efter samtycke, se assets/samtycke.js -->
+<script src="/assets/samtycke.js" defer></script>
 </head>
 <body>
 <div style="background: #FBF7EF; color: #123252; font-family: 'Figtree', system-ui, sans-serif; font-weight: 400; line-height: 1.6; overflow-x: hidden;">
