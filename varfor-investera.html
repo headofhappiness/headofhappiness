@@ -24,8 +24,6 @@
   @media (max-width: 560px) { .stat-grid { grid-template-columns: 1fr; } }
   .roi-rad { display: grid; grid-template-columns: minmax(0, 13em) minmax(0, 1fr) 3.4em minmax(0, 18em); align-items: center; gap: 8px 16px; }
   .roi-match { font-size: 15px; line-height: 1.4; }
-  .roi-rad-3 { display: grid; grid-template-columns: minmax(0, 13em) minmax(0, 1fr) 3.4em; align-items: center; gap: 8px 16px; }
-  @media (max-width: 900px) { .roi-rad-3 { grid-template-columns: minmax(0, 11em) minmax(0, 1fr) 3.2em; } }
   @media (max-width: 900px) {
     .roi-rad { grid-template-columns: minmax(0, 11em) minmax(0, 1fr) 3.2em; }
     .roi-match { grid-column: 1 / -1; padding-bottom: 6px; border-bottom: 1px solid rgba(18,50,82,0.08); }
@@ -258,36 +256,40 @@
       <p style="margin: 0 0 clamp(30px, 4.5vw, 44px); max-width: 38em; font-size: 17.5px; line-height: 1.68; color: rgba(18,50,82,0.78); text-wrap: pretty;">Deloitte har analyserat brittiska arbetsgivares investeringar i medarbetares psykiska hälsa. Analysen visar ett tydligt mönster: förebyggande insatser ger generellt bättre avkastning än insatser som sätts in först när problemen blivit stora. I studien var den genomsnittliga avkastningen 5,30 pund per satsat pund.</p>
       <div style="background: #FFFFFF; border: 1px solid rgba(191,106,91,0.22); border-radius: 18px; padding: clamp(24px, 3.2vw, 34px);">
 
-        <div class="roi-rad-3" style="margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(18,50,82,0.12);">
+        <div class="roi-rad" style="margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(18,50,82,0.12);">
           <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #A25A4D;">När insatsen sätts in</span>
           <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #A25A4D;">Avkastning per satsat pund</span>
           <span></span>
+          <span class="roi-match" style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #A25A4D; border: 0; padding: 0;">Hos oss</span>
         </div>
 
         <div style="display: grid; gap: 18px;">
 
-          <div class="roi-rad-3">
+          <div class="roi-rad">
             <span style="font-size: 16px; line-height: 1.35; color: #123252; font-weight: 500;">Tidigt, till hela organisationen</span>
             <span style="height: 14px; border-radius: 999px; background: rgba(18,50,82,0.09);">
               <span style="display: block; height: 14px; width: 80%; border-radius: 999px; background: #BF6A5B;"></span>
             </span>
             <span style="font-size: 17px; text-align: right; font-variant-numeric: tabular-nums; color: #A25A4D; font-weight: 700;">5,6</span>
+            <span class="roi-match" style="color: rgba(18,50,82,0.82);">Föreläsningen, som hålls för alla samtidigt</span>
           </div>
 
-          <div class="roi-rad-3">
+          <div class="roi-rad">
             <span style="font-size: 16px; line-height: 1.35; color: #123252; font-weight: 500;">Proaktiva insatser</span>
             <span style="height: 14px; border-radius: 999px; background: rgba(18,50,82,0.09);">
               <span style="display: block; height: 14px; width: 71%; border-radius: 999px; background: #123252;"></span>
             </span>
             <span style="font-size: 17px; text-align: right; font-variant-numeric: tabular-nums; color: rgba(18,50,82,0.8); font-weight: 600;">5,0</span>
+            <span class="roi-match" style="color: rgba(18,50,82,0.82);">Screening, det digitala programmet och det dagliga stödet</span>
           </div>
 
-          <div class="roi-rad-3">
+          <div class="roi-rad">
             <span style="font-size: 16px; line-height: 1.35; color: rgba(18,50,82,0.6);">Reaktiva insatser</span>
             <span style="height: 14px; border-radius: 999px; background: rgba(18,50,82,0.09);">
               <span style="display: block; height: 14px; width: 49%; border-radius: 999px; background: rgba(18,50,82,0.35);"></span>
             </span>
             <span style="font-size: 17px; text-align: right; font-variant-numeric: tabular-nums; color: rgba(18,50,82,0.55);">3,4</span>
+            <span class="roi-match" style="color: rgba(18,50,82,0.55); font-style: italic;">Gör vi inte. Vi arbetar innan.</span>
           </div>
 
         </div>
