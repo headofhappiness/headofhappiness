@@ -22,6 +22,12 @@
   .nav-toggle { display: none; }
   .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   @media (max-width: 560px) { .stat-grid { grid-template-columns: 1fr; } }
+  .roi-rad { display: grid; grid-template-columns: minmax(0, 13em) minmax(0, 1fr) 3.4em minmax(0, 18em); align-items: center; gap: 8px 16px; }
+  .roi-match { font-size: 15px; line-height: 1.4; }
+  @media (max-width: 900px) {
+    .roi-rad { grid-template-columns: minmax(0, 11em) minmax(0, 1fr) 3.2em; }
+    .roi-match { grid-column: 1 / -1; padding-bottom: 6px; border-bottom: 1px solid rgba(18,50,82,0.08); }
+  }
   .nav-links > a { white-space: nowrap; }
   @media (max-width: 1000px) {
     .nav-links { display: none !important; }
@@ -278,56 +284,68 @@
             
           </div>
           <p style="margin: 18px 0 0; font-size: 13.5px; color: rgba(18,50,82,0.5);">Avkastning per satsat pund. Källa: <a href="https://www.deloitte.com/uk/en/services/consulting/analysis/mental-health-and-employers-the-case-for-investment.html" target="_blank" rel="noopener" style="color: rgba(18,50,82,0.62); text-decoration: underline;">Deloitte, Mental health and employers: the case for investment, 2022</a></p>
-
-          <div style="margin-top: clamp(30px, 4vw, 44px); padding-top: clamp(26px, 3.4vw, 36px); border-top: 1px solid rgba(18,50,82,0.14);">
-            <h3 style="margin: 0 0 12px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(21px, 2.8vw, 28px); line-height: 1.16; letter-spacing: -0.015em;">Vilken sorts insats ger mest tillbaka?</h3>
-            <p style="margin: 0 0 clamp(22px, 3vw, 30px); max-width: 44em; font-size: 16.5px; line-height: 1.66; color: rgba(18,50,82,0.78); text-wrap: pretty;">Samma analys bröt ner avkastningen på olika typer av insatser. Screening gav högst avkastning, följt av utbildning och kunskapshöjande insatser. Individuell terapi, som sätts in när någon redan blivit sjuk, gav lägst.</p>
-
-            <div style="display: grid; gap: 14px;">
-
-              <div style="display: grid; grid-template-columns: minmax(0, 12em) 1fr 3.2em; align-items: center; gap: 12px;">
-                <span style="font-size: 15px; line-height: 1.35; color: rgba(18,50,82,0.8);">Screening</span>
-                <span style="height: 12px; border-radius: 999px; background: rgba(18,50,82,0.09);">
-                  <span style="display: block; height: 12px; width: 90%; border-radius: 999px; background: #BF6A5B;"></span>
-                </span>
-                <span style="font-size: 15px; text-align: right; font-variant-numeric: tabular-nums; color: #A25A4D; font-weight: 600;">6,3</span>
-              </div>
-
-              <div style="display: grid; grid-template-columns: minmax(0, 12em) 1fr 3.2em; align-items: center; gap: 12px;">
-                <span style="font-size: 15px; line-height: 1.35; color: rgba(18,50,82,0.8);">Utbildning och träning</span>
-                <span style="height: 12px; border-radius: 999px; background: rgba(18,50,82,0.09);">
-                  <span style="display: block; height: 12px; width: 86%; border-radius: 999px; background: #123252;"></span>
-                </span>
-                <span style="font-size: 15px; text-align: right; font-variant-numeric: tabular-nums; color: rgba(18,50,82,0.7);">6,0</span>
-              </div>
-
-              <div style="display: grid; grid-template-columns: minmax(0, 12em) 1fr 3.2em; align-items: center; gap: 12px;">
-                <span style="font-size: 15px; line-height: 1.35; color: rgba(18,50,82,0.8);">Kunskapshöjande insatser</span>
-                <span style="height: 12px; border-radius: 999px; background: rgba(18,50,82,0.09);">
-                  <span style="display: block; height: 12px; width: 76%; border-radius: 999px; background: #123252;"></span>
-                </span>
-                <span style="font-size: 15px; text-align: right; font-variant-numeric: tabular-nums; color: rgba(18,50,82,0.7);">5,3</span>
-              </div>
-
-              <div style="display: grid; grid-template-columns: minmax(0, 12em) 1fr 3.2em; align-items: center; gap: 12px;">
-                <span style="font-size: 15px; line-height: 1.35; color: rgba(18,50,82,0.8);">Individuell terapi</span>
-                <span style="height: 12px; border-radius: 999px; background: rgba(18,50,82,0.09);">
-                  <span style="display: block; height: 12px; width: 44%; border-radius: 999px; background: #123252;"></span>
-                </span>
-                <span style="font-size: 15px; text-align: right; font-variant-numeric: tabular-nums; color: rgba(18,50,82,0.7);">3,1</span>
-              </div>
-
-            </div>
-
-            <p style="margin: 18px 0 0; font-size: 13.5px; color: rgba(18,50,82,0.5);">Avkastning per satsat pund, per typ av insats. Källa: <a href="https://www.deloitte.com/uk/en/services/consulting/analysis/mental-health-and-employers-the-case-for-investment.html" target="_blank" rel="noopener" style="color: rgba(18,50,82,0.62); text-decoration: underline;">Deloitte 2022, figur 19</a></p>
-
-            <p style="margin: clamp(22px, 3vw, 28px) 0 0; max-width: 44em; font-size: 17px; line-height: 1.66; color: #123252; font-weight: 500; text-wrap: pretty;">De tre översta är precis det vi arbetar med: screening, utbildning och kunskap till hela arbetsplatsen. Den nedersta, individuell behandling, är vårdens uppgift och inte vår.</p>
-          </div>
         </div>
         <div style="align-self: center;">
           <p style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: clamp(20px, 2.4vw, 26px); line-height: 1.4; color: #123252; text-wrap: pretty;">Tidiga insatser ger mer tillbaka.</p>
           <p style="margin: 16px 0 0; font-size: 17px; line-height: 1.68; color: rgba(18,50,82,0.8); text-wrap: pretty;">Resultaten går inte att direkt översätta till svenska arbetsgivare, men de visar värdet av att arbeta förebyggande. Deloitte lyfter bland annat insatser som ökar kunskapen och ger människor verktyg att ta hand om sin psykiska hälsa.</p>
           <p style="margin: 16px 0 0; font-size: 17px; line-height: 1.68; color: #123252; font-weight: 500; text-wrap: pretty;">Det är också utgångspunkten för Head of Happiness: att stärka individen innan problemen blivit stora.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: clamp(44px, 6vw, 72px);">
+        <h3 style="margin: 0 0 14px; max-width: 24em; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(23px, 3.2vw, 32px); line-height: 1.16; letter-spacing: -0.015em; text-wrap: balance;">Vilken sorts insats ger mest tillbaka?</h3>
+        <p style="margin: 0 0 clamp(26px, 3.4vw, 34px); max-width: 46em; font-size: 17px; line-height: 1.68; color: rgba(18,50,82,0.78); text-wrap: pretty;">Deloitte bröt också ner avkastningen på olika typer av insatser. Screening gav högst avkastning, följt av utbildning och medvetandehöjande insatser. Individuell terapi, som sätts in när någon redan blivit sjuk, gav lägst. De tre översta är precis det Head of Happiness arbetar med.</p>
+
+        <div style="background: #FFFFFF; border: 1px solid rgba(191,106,91,0.22); border-radius: 18px; padding: clamp(24px, 3.2vw, 34px);">
+
+          <div class="roi-rad" style="margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(18,50,82,0.12);">
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #A25A4D;">Typ av insats</span>
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #A25A4D;">Avkastning per satsat pund</span>
+            <span></span>
+            <span class="roi-match" style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #A25A4D; border: 0; padding: 0;">Hos oss</span>
+          </div>
+
+          <div style="display: grid; gap: 18px;">
+
+            <div class="roi-rad">
+              <span style="font-size: 16px; line-height: 1.35; color: #123252; font-weight: 500;">Screening</span>
+              <span style="height: 14px; border-radius: 999px; background: rgba(18,50,82,0.09);">
+                <span style="display: block; height: 14px; width: 90%; border-radius: 999px; background: #BF6A5B;"></span>
+              </span>
+              <span style="font-size: 17px; text-align: right; font-variant-numeric: tabular-nums; color: #A25A4D; font-weight: 700;">6,3</span>
+              <span class="roi-match" style="color: rgba(18,50,82,0.82);">Vår anonyma screening, byggd på KEDS och WHO-5</span>
+            </div>
+
+            <div class="roi-rad">
+              <span style="font-size: 16px; line-height: 1.35; color: #123252; font-weight: 500;">Utbildning och träning</span>
+              <span style="height: 14px; border-radius: 999px; background: rgba(18,50,82,0.09);">
+                <span style="display: block; height: 14px; width: 86%; border-radius: 999px; background: #123252;"></span>
+              </span>
+              <span style="font-size: 17px; text-align: right; font-variant-numeric: tabular-nums; color: rgba(18,50,82,0.8); font-weight: 600;">6,0</span>
+              <span class="roi-match" style="color: rgba(18,50,82,0.82);">Det digitala utbildnings- och träningsprogrammet</span>
+            </div>
+
+            <div class="roi-rad">
+              <span style="font-size: 16px; line-height: 1.35; color: #123252; font-weight: 500;">Medvetandehöjande insatser</span>
+              <span style="height: 14px; border-radius: 999px; background: rgba(18,50,82,0.09);">
+                <span style="display: block; height: 14px; width: 76%; border-radius: 999px; background: #123252;"></span>
+              </span>
+              <span style="font-size: 17px; text-align: right; font-variant-numeric: tabular-nums; color: rgba(18,50,82,0.8); font-weight: 600;">5,3</span>
+              <span class="roi-match" style="color: rgba(18,50,82,0.82);">Föreläsningen och det dagliga stödet i mobilen</span>
+            </div>
+
+            <div class="roi-rad">
+              <span style="font-size: 16px; line-height: 1.35; color: rgba(18,50,82,0.6);">Individuell terapi</span>
+              <span style="height: 14px; border-radius: 999px; background: rgba(18,50,82,0.09);">
+                <span style="display: block; height: 14px; width: 44%; border-radius: 999px; background: rgba(18,50,82,0.35);"></span>
+              </span>
+              <span style="font-size: 17px; text-align: right; font-variant-numeric: tabular-nums; color: rgba(18,50,82,0.55);">3,1</span>
+              <span class="roi-match" style="color: rgba(18,50,82,0.55); font-style: italic;">Gör vi inte. Det är vårdens uppgift.</span>
+            </div>
+
+          </div>
+
+          <p style="margin: clamp(20px, 2.6vw, 26px) 0 0; padding-top: 16px; border-top: 1px solid rgba(18,50,82,0.1); font-size: 13.5px; line-height: 1.6; color: rgba(18,50,82,0.5);">Genomsnittlig avkastning per satsat pund, per typ av insats. Deloitte lyfter särskilt att screening fångar upp tidigt, och att utbildning och medvetandehöjande insatser är förhållandevis enkla att genomföra. Källa: <a href="https://www.deloitte.com/uk/en/services/consulting/analysis/mental-health-and-employers-the-case-for-investment.html" target="_blank" rel="noopener" style="color: rgba(18,50,82,0.62); text-decoration: underline;">Deloitte 2022, figur 19</a></p>
         </div>
       </div>
   </section>
