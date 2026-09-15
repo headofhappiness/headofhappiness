@@ -40,6 +40,10 @@
   table.tak th { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #A25A4D; }
   table.tak td.bel { white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 600; }
   .tabellhölje { overflow-x: auto; }
+  @media (max-width: 430px) {
+    table.tak { font-size: 15px; }
+    table.tak th, table.tak td { padding: 10px 8px; }
+  }
 
   .ruta { background: #F2E9D8; border-radius: 14px; padding: 20px 22px; margin: 20px 0; }
   .ruta p { margin: 0; font-size: 16px; line-height: 1.62; color: rgba(18,50,82,0.86); text-wrap: pretty; }
