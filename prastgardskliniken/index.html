@@ -236,17 +236,20 @@
     }
     .material .rubrik,
     .material .ordning { grid-column: 1 / -1; }
-    .kort.bred { grid-column: 1 / -1; }
+    /* Erbjudandet overst i hela bredden, programmet under */
+    .kort.bred,
+    .kort.vid { grid-column: 1 / -1; }
     /* Brodtext ska inte bli bredare an att den gar att lasa */
-    .kort.bred > p { max-width: 64ch; }
-    .kort.bred .delar {
+    .kort.bred > p,
+    .kort.vid > p { max-width: 64ch; }
+    .kort.vid .delar {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: start;
       gap: 0 36px;
       margin-top: 4px;
     }
-    .kort.bred .del .etikett { margin-top: 0; }
+    .kort.vid .del .etikett { margin-top: 0; }
 
     .omraden {
       display: grid;
@@ -265,11 +268,16 @@
     .kontakt .spar { width: 100%; margin-top: 12px; }
   }
 
-  /* Tre spalter nar det finns plats: erbjudande, forelasning, screening
-     pa en rad, programmet i hela bredden under */
+  /* Nar det finns plats: erbjudandet som bred rad overst, och de tre
+     insatserna pa en rad under. Programmet far en bredare spalt
+     eftersom det har mest text. */
   @media (min-width: 1100px) {
-    .wrap { max-width: 70rem; }
-    .material { grid-template-columns: repeat(3, 1fr); }
+    .wrap { max-width: 78rem; }
+    .material { grid-template-columns: 1fr 1fr 1.45fr; }
+    .kort.vid { grid-column: auto; }
+    .kort.vid > p { max-width: none; }
+    .kort.vid .delar { display: flex; flex-direction: column; gap: 9px; }
+    .kort.vid .del .etikett { margin-top: 12px; }
   }
 </style>
 </head>
@@ -299,7 +307,7 @@
     <div class="rubrik">Att titta på</div>
     <p class="ordning">Här är materialet samlat. Ta det i den ordning du vill. Har du inte mött Head of Happiness tidigare är det enklast att börja med erbjudandet.</p>
 
-    <article class="kort">
+    <article class="kort bred">
       <div class="rad">
         <h2>Erbjudandet</h2>
       </div>
@@ -326,7 +334,7 @@
       <a class="knapp" href="https://headofhappiness.github.io/demo/?org=prastgardskliniken" target="_blank" rel="noopener noreferrer">Öppna screeningen →</a>
     </article>
 
-    <article class="kort bred">
+    <article class="kort vid">
       <div class="rad">
         <h2>Det digitala programmet</h2>
       </div>
