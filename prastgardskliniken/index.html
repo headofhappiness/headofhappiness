@@ -264,6 +264,13 @@
     .kontakt .namn { width: 100%; }
     .kontakt .spar { width: 100%; margin-top: 12px; }
   }
+
+  /* Tre spalter nar det finns plats: erbjudande, forelasning, screening
+     pa en rad, programmet i hela bredden under */
+  @media (min-width: 1100px) {
+    .wrap { max-width: 70rem; }
+    .material { grid-template-columns: repeat(3, 1fr); }
+  }
 </style>
 </head>
 <body>
@@ -302,6 +309,16 @@
 
     <article class="kort">
       <div class="rad">
+        <h2>Föreläsningen</h2>
+      </div>
+      <p>Syftet är att väcka viljan och lusten att ta hand om sig själv, ge kunskap, och skapa en relation. Det är mig deltagarna möter igen i programmet och i nudgingen. Väljer de att gå vidare, till exempel till ett hälsosamtal, finns förtroendet redan där.</p>
+      <p>Hela underlaget ligger här, så du ser hur helheten hänger ihop. Föreläsningen tar två timmar när jag håller den; bläddra som du vill, du behöver inte läsa allt.</p>
+      <p>Det här är en demoversion. Föreläsningen anpassas alltid efter kund, önskemål och bransch; innehåll, exempel och tonläge sätts utifrån vilka som sitter i rummet.</p>
+      <a class="knapp" href="https://claude.ai/code/artifact/c6d48f63-eb40-4d91-83a7-83f7de539377" target="_blank" rel="noopener noreferrer">Öppna föreläsningen →</a>
+    </article>
+
+    <article class="kort">
+      <div class="rad">
         <h2>Screeningen</h2>
       </div>
       <p>Gör den själv, precis som en medarbetare skulle göra. Anonym, inga personuppgifter.</p>
@@ -335,15 +352,6 @@
       </div>
     </article>
 
-    <article class="kort">
-      <div class="rad">
-        <h2>Föreläsningen</h2>
-      </div>
-      <p>Syftet är att väcka viljan och lusten att ta hand om sig själv, ge kunskap, och skapa en relation. Det är mig deltagarna möter igen i programmet och i nudgingen. Väljer de att gå vidare, till exempel till ett hälsosamtal, finns förtroendet redan där.</p>
-      <p>Hela underlaget ligger här, så du ser hur helheten hänger ihop. Föreläsningen tar två timmar när jag håller den; bläddra som du vill, du behöver inte läsa allt.</p>
-      <p>Det här är en demoversion. Föreläsningen anpassas alltid efter kund, önskemål och bransch; innehåll, exempel och tonläge sätts utifrån vilka som sitter i rummet.</p>
-      <a class="knapp" href="https://claude.ai/code/artifact/c6d48f63-eb40-4d91-83a7-83f7de539377" target="_blank" rel="noopener noreferrer">Öppna föreläsningen →</a>
-    </article>
   </section>
 
   <aside class="not">
