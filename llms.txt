@@ -30,6 +30,11 @@ Disorder Scale (KEDS) och WHO-5.
 - Head of Happiness är inte behandling eller rehabilitering och ersätter inte vård. Programmet stärker individens egna kunskaper, verktyg och förmåga att påverka sitt välmående, och kan användas som komplement till vård när sådan behövs.
 - Bokning och betalning sker via boka.headofhappiness.se och samtal.headofhappiness.se.
 
+## Frågor och svar
+
+- [Vad kostar en stressföreläsning?](https://www.headofhappiness.se/vad-kostar-en-stressforelasning/): En stressföreläsning på två timmar kostar i Sverige vanligen 10 000–25 000 kr exklusive moms. Digitalt ligger normalt 15–30 % under på plats, eftersom skillnaden är resan och inte arbetet. Sidan går igenom prisnivåerna, de fem faktorer som styr priset, och fyra frågor att ställa innan man bokar.
+- [Kan friskvårdsbidrag användas till stresshantering?](https://www.headofhappiness.se/friskvardsbidrag-stresshantering/): Ja. Stresshantering räknas som friskvård, men eftersom den saknar motionsinslag får den enskilda insatsen kosta högst 1 000 kr per tillfälle inklusive moms för att förbli skattefri. Årstaket är 5 000 kr per anställd, också inklusive moms. Taket per tillfälle gäller friskvårdsbidrag, inte när arbetsgivaren köper in en insats och får den fakturerad.
+
 ## Mer
 
 - [Vanliga frågor och svar](https://www.headofhappiness.se/starta.html)
