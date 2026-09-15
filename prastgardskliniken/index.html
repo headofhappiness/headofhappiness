@@ -218,6 +218,50 @@
   .kontakt a:hover { text-decoration: underline; }
   .kontakt a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
   .spar { margin-top: 18px; font-size: 0.78rem; color: var(--muted); }
+
+  /* Programkortets tva halvor: staplade som forut i mobil */
+  .delar { display: flex; flex-direction: column; gap: 9px; }
+  .del { display: flex; flex-direction: column; gap: 9px; }
+
+  /* Bredare uppstallning pa stora skarmar */
+  @media (min-width: 900px) {
+    .wrap { max-width: 64rem; gap: 46px; }
+    .topp .ingress { max-width: 44rem; }
+
+    .material {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      gap: 18px;
+    }
+    .material .rubrik,
+    .material .ordning { grid-column: 1 / -1; }
+    .kort.bred { grid-column: 1 / -1; }
+    .kort.bred .delar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      gap: 0 36px;
+      margin-top: 4px;
+    }
+    .kort.bred .del .etikett { margin-top: 0; }
+
+    .omraden {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px 30px;
+      padding-left: 1.15em;
+    }
+
+    .kontakt {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 6px 28px;
+    }
+    .kontakt .namn { width: 100%; }
+    .kontakt .spar { width: 100%; margin-top: 12px; }
+  }
 </style>
 </head>
 <body>
@@ -237,7 +281,7 @@
       <span class="ordmark">Head of Happiness</span>
     </div>
     <h1>För Prästgårdskliniken</h1>
-    <p class="ingress">Sammanställt inför vårt möte i Vallda, så att vi har något gemensamt att utgå från när vi ses.</p>
+    <p class="ingress">Sammanställt efter vårt möte i Vallda, så att du enkelt kan dela det vidare internt.</p>
     <p class="ingress">Head of Happiness stärker individens vilja och förmåga att ta hand om sig själv och påverka sitt mående. Systemet kombinerar föreläsning, screening, nudging och digitalt program, och kan användas helt eller i delar.</p>
     <p class="ingress">Innehållet är evidensbaserat och det digitala programmet är granskat och rekommenderat av specialistläkare i allmänmedicin. Head of Happiness ersätter inte medicinsk bedömning eller behandling; vi arbetar med det individen själv kan påverka.</p>
   </header>
@@ -263,24 +307,30 @@
       <a class="knapp" href="https://headofhappiness.github.io/demo/?org=prastgardskliniken" target="_blank" rel="noopener noreferrer">Öppna screeningen →</a>
     </article>
 
-    <article class="kort">
+    <article class="kort bred">
       <div class="rad">
         <h2>Det digitala programmet</h2>
       </div>
       <p>För den som vill fördjupa sig och fortsätta arbeta med sitt välmående. Kunskap, reflektion, övningar och konkreta verktyg inom områden som påverkar hur vi mår. Från januari 2027 även digitala live-träffar.</p>
       <p>Varje kund kan få en egen uppsättning av programmet så innehållet kan justeras efter era önskemål. Är det till enskilda individer finns redan ett färdigt program. Det går att använda både på datorn och i appen.</p>
       <a class="knapp stor" href="https://boka.headofhappiness.se/challenge-page/fd149be0-cf49-496b-987f-52bbf8df8df1" target="_blank" rel="noopener noreferrer">Öppna programmet →</a>
-      <div class="etikett">På datorn, på sidan som öppnas</div>
-      <ol class="steg">
-        <li>Klicka <b>Jag vill delta</b></li>
-        <li>Registrera dig med din e-postadress</li>
-        <li>Ange kupongkoden <b class="kodtext">demo2026</b> i rutan <b>Ange en kupongkod</b> till höger och klicka <b>Använd</b></li>
-        <li>Klicka <b>Gå med i program</b></li>
-      </ol>
-      <p class="obs">Priset 2 495 kr visas innan koden är inlagd, det är som det ska. När koden är använd står det 0 kr.</p>
-      <div class="etikett">I mobilen</div>
-      <p class="mobil">Ladda ner appen <b>Head of Happiness</b> och välj programmet som heter <b>DEMO Från stress till lugn, lust &amp; kraft</b>. Det ligger ett program till med nästan samma namn.</p>
-      <p class="mobil-sist">Börja där du vill, dator eller app spelar ingen roll. Registrera dig med samma e-postadress första gången du loggar in, så kommer programmet ihåg dig och du hittar tillbaka från båda.</p>
+      <div class="delar">
+        <div class="del">
+          <div class="etikett">På datorn, på sidan som öppnas</div>
+          <ol class="steg">
+            <li>Klicka <b>Jag vill delta</b></li>
+            <li>Registrera dig med din e-postadress</li>
+            <li>Ange kupongkoden <b class="kodtext">demo2026</b> i rutan <b>Ange en kupongkod</b> till höger och klicka <b>Använd</b></li>
+            <li>Klicka <b>Gå med i program</b></li>
+          </ol>
+          <p class="obs">Priset 2 495 kr visas innan koden är inlagd, det är som det ska. När koden är använd står det 0 kr.</p>
+        </div>
+        <div class="del">
+          <div class="etikett">I mobilen</div>
+          <p class="mobil">Ladda ner appen <b>Head of Happiness</b> och välj programmet som heter <b>DEMO Från stress till lugn, lust &amp; kraft</b>. Det ligger ett program till med nästan samma namn.</p>
+          <p class="mobil-sist">Börja där du vill, dator eller app spelar ingen roll. Registrera dig med samma e-postadress första gången du loggar in, så kommer programmet ihåg dig och du hittar tillbaka från båda.</p>
+        </div>
+      </div>
     </article>
 
     <article class="kort">
@@ -314,7 +364,7 @@
     <a href="mailto:lisa@headofhappiness.se">lisa@headofhappiness.se</a>
     <a href="tel:+46708200894">+46 708 200 894</a>
     <a href="https://www.headofhappiness.se" target="_blank" rel="noopener noreferrer">www.headofhappiness.se</a>
-    <div class="spar">Sammanställd för Prästgårdskliniken inför vårt möte den 15 september 2026.</div>
+    <div class="spar">Sammanställd för Prästgårdskliniken efter vårt möte den 15 september 2026.</div>
   </footer>
 
 </div>
