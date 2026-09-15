@@ -237,6 +237,8 @@
     .material .rubrik,
     .material .ordning { grid-column: 1 / -1; }
     .kort.bred { grid-column: 1 / -1; }
+    /* Brodtext ska inte bli bredare an att den gar att lasa */
+    .kort.bred > p { max-width: 64ch; }
     .kort.bred .delar {
       display: grid;
       grid-template-columns: 1fr 1fr;
