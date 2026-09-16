@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lisa Jonsson – konsultpresentation för KC Group</title>
+<meta name="description" content="Konsultpresentation för KC Group: hälsa och arbetsmiljö, med fokus på det som händer efter insatsen.">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/favicon-180.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..400&amp;display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: #FBF7EF; font-family: 'Figtree', system-ui, -apple-system, sans-serif; color: #123252; }
+  * { box-sizing: border-box; }
+  a { color: #123252; text-decoration: none; }
+  a:hover { color: #BF6A5B; }
+  img { max-width: 100%; }
+  .nav-toggle { display: none; }
+  .nav-links > a { white-space: nowrap; }
+  @media (max-width: 1000px) {
+    .nav-links { display: none !important; }
+    .nav-links[data-open="true"] { display: flex !important; flex-direction: column; align-items: flex-start; gap: 4px; position: absolute; top: 100%; left: 0; right: 0; padding: 14px clamp(18px, 4vw, 40px) 22px; background: #FBF7EF; border-bottom: 1px solid rgba(18,50,82,0.12); }
+    .nav-toggle { display: inline-flex; }
+  }
+  @media (max-width: 400px) { .hh-logo { font-size: 13.5px !important; letter-spacing: 0.06em !important; gap: 9px !important; } }
+  @media (max-width: 430px) { header a[href*="fa-ett-forslag"] { display: none !important; } }
+  .x1:hover { background: #1B4571; color: #FBF7EF; }
+  .x2:hover { background: #FBF7EF; color: #123252; }
+
+  .inre { max-width: 1160px; margin: 0 auto; padding: clamp(46px, 6.5vw, 86px) clamp(18px, 4vw, 40px); }
+  .smal { max-width: 40em; }
+  h1, h2, h3 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; margin: 0; letter-spacing: -0.018em; }
+  .etikett { margin: 0 0 16px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #A25A4D; }
+  .etikett.ljus { color: #F9E0A9; }
+  h2.avd { font-size: clamp(26px, 3.8vw, 40px); line-height: 1.13; margin: 0 0 18px; }
+  p.brod { margin: 0 0 16px; font-size: 17px; line-height: 1.68; color: rgba(18,50,82,0.82); text-wrap: pretty; }
+  p.brod:last-child { margin-bottom: 0; }
+
+  .rutnat { display: grid; grid-template-columns: repeat(auto-fit, minmax(258px, 1fr)); gap: clamp(18px, 2.4vw, 26px); }
+  .kort { background: #fff; border-radius: 18px; padding: clamp(24px, 3vw, 32px); }
+  .kort h3 { font-size: clamp(19px, 2.2vw, 23px); line-height: 1.24; margin: 0 0 10px; }
+  .kort p { margin: 0; font-size: 16px; line-height: 1.62; color: rgba(18,50,82,0.76); text-wrap: pretty; }
+  .kort .pris { display: block; margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(18,50,82,0.12); font-size: 14.5px; font-weight: 600; color: #A25A4D; }
+
+  table.jmf { width: 100%; border-collapse: collapse; font-size: 16px; }
+  table.jmf th { padding: 0 16px 12px 0; text-align: left; font-size: 12.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #A25A4D; border-bottom: 1.5px solid rgba(18,50,82,0.28); }
+  table.jmf td { padding: 15px 16px 15px 0; vertical-align: top; line-height: 1.6; border-bottom: 1px solid rgba(18,50,82,0.12); color: rgba(18,50,82,0.82); }
+  table.jmf td:first-child { font-weight: 600; color: #123252; width: 34%; }
+  .tabellhölje { overflow-x: auto; }
+  @media (max-width: 560px) { table.jmf { font-size: 15px; } table.jmf td:first-child { width: 40%; } }
+
+  ul.punkter { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  ul.punkter li { display: flex; align-items: baseline; gap: 13px; font-size: 16.5px; line-height: 1.58; color: rgba(18,50,82,0.82); }
+  ul.punkter li span.bock { flex: none; color: #BF6A5B; font-weight: 700; }
+  ul.punkter.ljus li { color: rgba(251,247,239,0.86); }
+  ul.punkter.ljus li span.bock { color: #F9E0A9; }
+
+  blockquote.citat { margin: 0; padding: 0 0 0 22px; border-left: 3px solid #E9B79C; font-family: 'Source Serif 4', Georgia, serif; font-size: clamp(19px, 2.3vw, 24px); line-height: 1.44; color: #123252; }
+  blockquote.citat cite { display: block; margin-top: 12px; font-family: 'Figtree', sans-serif; font-style: normal; font-size: 14.5px; letter-spacing: 0.02em; color: rgba(18,50,82,0.6); }
+</style>
+</head>
+<body>
+
+<div style="background: #FBF7EF; color: #123252; font-family: 'Figtree', system-ui, sans-serif; font-weight: 400; line-height: 1.6; overflow-x: hidden;">
+
+  <header style="position: sticky; top: 0; z-index: 20; background: rgba(251,247,239,0.93); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(18,50,82,0.1);">
+    <div style="max-width: 1160px; margin: 0 auto; padding: 13px clamp(18px, 4vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 18px;">
+      <a href="../index.html" class="hh-logo" style="display: inline-flex; align-items: center; gap: 11px; font-weight: 600; font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap;">
+        <span style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 11px; background: #123252;"><img src="../assets/hh-mark.png" alt="" style="display: block; width: 22px; height: 22px; object-fit: contain;"></span>
+        Head of Happiness
+      </a>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <nav class="nav-links" data-open="false" style="display: flex; align-items: center; gap: clamp(13px, 1.8vw, 24px); font-size: 15px;">
+          <a href="../for-arbetsgivare.html" style="min-height: 44px; display: inline-flex; align-items: center;">För arbetsgivare</a>
+          <a href="../forelasning.html" style="min-height: 44px; display: inline-flex; align-items: center;">Föreläsningen</a>
+          <a href="../om-oss.html" style="min-height: 44px; display: inline-flex; align-items: center;">Om oss</a>
+          <a href="../varfor-investera.html" style="min-height: 44px; display: inline-flex; align-items: center;">Varför investera</a>
+        </nav>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" type="button" aria-label="Meny" style="align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid rgba(18,50,82,0.2); border-radius: 999px; background: transparent; color: #123252; font-size: 17px; cursor: pointer;">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section data-screen-label="Hero">
+    <div class="inre" style="padding-bottom: clamp(34px, 4vw, 52px);">
+      <p class="etikett">Konsultpresentation för KC Group</p>
+      <h1 style="margin: 0 0 20px; max-width: 16em; font-size: clamp(32px, 5vw, 56px); line-height: 1.07; letter-spacing: -0.022em; text-wrap: balance;">Lisa Jonsson<span style="display: block; color: #BF6A5B;">hälsa och arbetsmiljö</span></h1>
+      <p class="brod smal" style="font-size: clamp(18px, 2vw, 20px);">Ekonom i grunden och akademiskt utbildad hälsopromotör, med utbildning inom bland annat stressfysiologi, coaching och beteendeförändring. Jag arbetar med att väcka medarbetares vilja och stärka deras förmåga att påverka sitt mående.</p>
+      <p class="brod smal">Den här sidan är skriven inför vårt möte den 3 november, så att ni vet vad jag kan bidra med innan vi ses. Hör gärna av dig om något saknas.</p>
+    </div>
+  </section>
+
+  <!-- VARFÖR KC GROUP -->
+  <section data-screen-label="Varför KC Group" style="background: #F2E9D8;">
+    <div class="inre">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(26px, 4vw, 56px); align-items: start;">
+        <div>
+          <p class="etikett">Därför hörde jag av mig</p>
+          <h2 class="avd">En utgångspunkt jag delar till fullo</h2>
+        </div>
+        <div>
+          <blockquote class="citat">Våra program och riktade insatser inom hälsa och arbetsmiljö handlar om att öka friskfaktorer, arbetsglädje och psykologisk trygghet.<cite>KC Group, Hälsa och arbetsmiljö</cite></blockquote>
+          <p class="brod" style="margin-top: 22px;">Att arbeta proaktivt och stärka friskfaktorer är precis samma ingång som jag har. Jag kommer inte in när någon redan är sjukskriven, utan innan dess, och jag arbetar med det den enskilda människan faktiskt kan påverka.</p>
+          <p class="brod">Utifrån hur jag uppfattar att ni arbetar tror jag att jag kan vara ett komplement snarare än ännu en röst i samma register.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DET JAG LEVERERAR -->
+  <section data-screen-label="Det jag levererar">
+    <div class="inre">
+      <p class="etikett">Det jag kan leverera</p>
+      <h2 class="avd" style="max-width: 15em;">Fyra delar som fungerar var för sig eller tillsammans</h2>
+      <p class="brod smal" style="margin-bottom: 34px;">Innehållet vilar på stressfysiologi och är granskat och rekommenderat av specialistläkare i allmänmedicin. Priserna nedan är mina egna listpriser; hur de ser ut i ett upplägg via er är förstås något vi bestämmer tillsammans.</p>
+
+      <div class="rutnat">
+        <div class="kort">
+          <h3>Föreläsning</h3>
+          <p>Från stress &amp; belastning till Lugn, lust &amp; kraft. Två timmar för hela arbetsplatsen om hur stress fungerar, vad som påverkar hur vi mår och hur mycket vi faktiskt kan påverka själva. Anpassas efter bransch och efter vilka som sitter i rummet.</p>
+          <span class="pris">Från 15 000 kr digitalt, från 18 000 kr på plats</span>
+        </div>
+        <div class="kort">
+          <h3>Anonym screening</h3>
+          <p>Bygger på KEDS och WHO-5, samma instrument som används inom vården. Ger arbetsgivaren ett anonymt utgångsläge och individen en bild av sin egen belastning och återhämtning. Går att göra om efteråt.</p>
+          <span class="pris">Ingår i upplägg, prissätts efter antal</span>
+        </div>
+        <div class="kort">
+          <h3>Digitalt program</h3>
+          <p>Korta kunskapsdelar, övningar och reflektion i mobil och dator, med arbetsbok. Deltagaren arbetar i egen takt. Områden: stress, återhämtning, sömn, rörelse, skärm, tankar och känslor, relationer och det som är viktigt i livet.</p>
+          <span class="pris">2 495 kr per medarbetare, exklusive moms</span>
+        </div>
+        <div class="kort">
+          <h3>Öppna reflektionsträffar</h3>
+          <p>45 minuter varannan vecka, digitalt, med mig som ledare. Frivilliga, i små grupper och över arbetsplatsgränser. Deltagaren behöver aldrig ha kameran på eller uppge sitt riktiga namn, vilket gör tröskeln låg.</p>
+          <span class="pris">Ingår för den som har programmet</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KOMPLEMENT -->
+  <section data-screen-label="Komplement" style="background: #123252; color: #FBF7EF;">
+    <div class="inre">
+      <p class="etikett ljus">Hur det kompletterar</p>
+      <h2 class="avd" style="max-width: 15em;">Det som händer efter dagen</h2>
+      <p class="brod" style="color: rgba(251,247,239,0.84); max-width: 40em;">Ni har redan starka insatser inom hälsa och arbetsmiljö, bland annat Återhämtningsdagen och Stresshantering. Jag vill vara ärlig med att mitt innehåll delvis ligger nära dem. Skillnaden är inte ämnet, utan vad som händer när dagen är slut.</p>
+      <p class="brod" style="color: rgba(251,247,239,0.84); max-width: 40em; margin-bottom: 30px;">En insats som avslutas samma dag lämnar deltagaren med inspiration. Min modell lämnar deltagaren med tre månaders stöd, en arbetsbok, frivilliga träffar och en mätning i andra änden. Det är där jag tror att jag tillför något ni inte redan har.</p>
+
+      <div class="tabellhölje">
+        <table class="jmf">
+          <thead>
+            <tr><th>&nbsp;</th><th style="color: #F9E0A9;">Så ser upplägget ut</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Före</td><td>Anonym screening ger ett utgångsläge på gruppnivå, utan att någon pekas ut.</td></tr>
+            <tr><td>Start</td><td>Gemensam föreläsning för hela arbetsplatsen. Två timmar.</td></tr>
+            <tr><td>Under tre månader</td><td>Digitalt program och arbetsbok, ungefär en timme totalt att ta i egen takt, plus stöd i vardagen. Frivilliga reflektionsträffar varannan vecka.</td></tr>
+            <tr><td>Avslut</td><td>Gemensam timme där gruppen samlas, delar vad som gjort skillnad och gör om mätningen.</td></tr>
+            <tr><td>Resultatet</td><td>En före- och efterbild som arbetsgivaren kan visa upp, och deltagare som vet vad de själva rår över.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="brod" style="color: rgba(251,247,239,0.7); font-size: 15.5px; margin-top: 26px; max-width: 40em;">En sak jag vill säga tydligt: Head of Happiness är inte behandling eller rehabilitering och ersätter inte vård. Vi ställer inga diagnoser. Behöver någon vård går den vägen alltid först.</p>
+    </div>
+  </section>
+
+  <!-- EGENMAKT -->
+  <section data-screen-label="Egenmakt" style="background: #F2E9D8;">
+    <div class="inre">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(26px, 4vw, 56px); align-items: start;">
+        <div>
+          <p class="etikett">Min hållning</p>
+          <h2 class="avd">Egenmakt är inte att lösa allt själv</h2>
+        </div>
+        <div>
+          <p class="brod">Arbetsgivaren har ansvaret för arbetsmiljön och de organisatoriska förutsättningarna. Samtidigt kan belastningen komma från många delar av livet samtidigt. Därför börjar föreläsningen med att sortera:</p>
+          <ul class="punkter" style="margin: 20px 0;">
+            <li><span class="bock">1</span><span><strong>Vad belastar mig just nu?</strong> Arbetet, sömnen, relationerna, egna krav, livssituationen, eller flera samtidigt.</span></li>
+            <li><span class="bock">2</span><span><strong>Vad kan jag själv påverka?</strong> Till exempel återhämtning, sömn, rörelse, egna krav, tankemönster eller gränser.</span></li>
+            <li><span class="bock">3</span><span><strong>Vad behöver jag lyfta med min chef?</strong> Till exempel otydliga prioriteringar, för höga eller motstridiga krav, för litet handlingsutrymme eller bristande stöd.</span></li>
+          </ul>
+          <p class="brod">Sorteringen är poängen. Den gör att medarbetaren kan agera på det hen själv rår över, och samtidigt sätta ord på det som behöver förändras av någon annan. Att stärka individens egenmakt är alltså inte att flytta arbetsmiljöansvaret.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KVALITET -->
+  <section data-screen-label="Kvalitet">
+    <div class="inre">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(26px, 4vw, 56px); align-items: start;">
+        <div>
+          <p class="etikett">Kvalitet och underlag</p>
+          <h2 class="avd">Det här står bakom</h2>
+          <blockquote class="citat" style="margin-top: 22px;">Head of Happiness presenterar en lättillgänglig och vetenskapligt förankrad bild av hur stress fungerar och vad du kan göra åt den.<cite>Anders Norman, specialistläkare i allmänmedicin</cite></blockquote>
+        </div>
+        <div>
+          <ul class="punkter">
+            <li><span class="bock">✓</span><span>Innehållet vilar på stressfysiologi, granskat och rekommenderat av specialistläkare i allmänmedicin.</span></li>
+            <li><span class="bock">✓</span><span>Screeningen bygger på KEDS och WHO-5, samma instrument som används inom vården.</span></li>
+            <li><span class="bock">✓</span><span>Deltagarna ger föreläsningen mellan 4,5 och 4,8 av 5 i utvärderingarna.</span></li>
+            <li><span class="bock">✓</span><span>Bakom programmet står hälsopromotörer, en ergonom och en medicinsk rådgivare.</span></li>
+            <li><span class="bock">✓</span><span>Godkänt som friskvård och tillgängligt via Epassi, Benifex och Söderberg &amp; Partners Benefits.</span></li>
+            <li><span class="bock">✓</span><span>Head of Happiness AB, org.nr 556834-4518. Egen F-skatt och ansvarsförsäkring.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRAKTISKT -->
+  <section data-screen-label="Praktiskt" style="background: #F2E9D8;">
+    <div class="inre">
+      <p class="etikett">Praktiskt</p>
+      <h2 class="avd">Så arbetar jag</h2>
+      <div class="rutnat" style="margin-top: 28px;">
+        <div class="kort"><h3>Var</h3><p>Hela Sverige på plats, och digitalt var som helst. Jag utgår från Kungsbacka och är van vid resdagar.</p></div>
+        <div class="kort"><h3>Omfattning</h3><p>Allt från en enskild föreläsning till ett sammanhängande upplägg över tre månader. Även stöd till en enskild medarbetare.</p></div>
+        <div class="kort"><h3>Målgrupp</h3><p>Hela arbetsplatser snarare än utvalda riskgrupper. Man behöver inte må dåligt för att vilja må bättre.</p></div>
+        <div class="kort"><h3>Framförhållning</h3><p>En föreläsning kan oftast bokas med några veckors varsel. Ett helt upplägg vill jag gärna planera en månad i förväg.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRÅGOR TILL ER -->
+  <section data-screen-label="Frågor">
+    <div class="inre">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(26px, 4vw, 56px); align-items: start;">
+        <div>
+          <p class="etikett">Inför mötet</p>
+          <h2 class="avd">Tre saker jag är nyfiken på</h2>
+          <p class="brod" style="margin-top: 18px;">Jag tar gärna mötet den 3 november och rättar mig efter er om tiden behöver flyttas.</p>
+        </div>
+        <div>
+          <ul class="punkter">
+            <li><span class="bock">?</span><span>Hur ser efterfrågan ut hos era kunder just nu inom stress och återhämtning, jämfört med ledarskap och psykologisk trygghet?</span></li>
+            <li><span class="bock">?</span><span>Er ProAct-tjänst ger kunder tillbaka halva kostnaden för hälsofrämjande insatser. Skulle den kunna omfatta ett upplägg som mitt?</span></li>
+            <li><span class="bock">?</span><span>Hur fungerar matchningen rent praktiskt för en konsult som mig, och vad är realistiskt i uppdragsvolym under ett första år?</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section data-screen-label="Kontakt" style="background: #123252; color: #FBF7EF;">
+    <div class="inre" style="text-align: center;">
+      <h2 class="avd" style="margin: 0 auto 18px; max-width: 18em;">Vi ses den 3 november</h2>
+      <p class="brod" style="color: rgba(251,247,239,0.82); max-width: 32em; margin: 0 auto 28px;">Hör gärna av dig innan dess om ni vill att jag förbereder något särskilt, eller om ni saknar något på den här sidan.</p>
+      <p style="margin: 0; font-size: 17px; line-height: 1.8; color: rgba(251,247,239,0.9);">
+        Lisa Jonsson<br>
+        <a href="mailto:lisa@headofhappiness.se" style="color: #F9E0A9;">lisa@headofhappiness.se</a><br>
+        <a href="tel:+46708200894" style="color: #F9E0A9;">0708 200894</a>
+      </p>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid rgba(18,50,82,0.12);">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(34px, 4vw, 52px) clamp(18px, 4vw, 40px); display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: clamp(22px, 3vw, 40px); font-size: 14.5px;">
+      <div>
+        <p style="margin: 0 0 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; font-size: 13px;">Head of Happiness</p>
+        <p style="margin: 0; color: rgba(18,50,82,0.68); line-height: 1.6;">hej@headofhappiness.se<br>0708 200894</p>
+      </div>
+      <nav style="display: flex; flex-direction: column; gap: 9px;">
+        <a href="../for-arbetsgivare.html">För arbetsgivare</a>
+        <a href="../forelasning.html">Föreläsningen</a>
+        <a href="../upplagg/">Upplägget</a>
+      </nav>
+      <nav style="display: flex; flex-direction: column; gap: 9px;">
+        <a href="../om-oss.html">Om oss</a>
+        <a href="../varfor-investera.html">Varför investera</a>
+        <a href="../programmet.html">Programmet</a>
+      </nav>
+      <p style="margin: 0; color: rgba(18,50,82,0.45); font-size: 13.5px; line-height: 1.6;">Head of Happiness AB<br>556834-4518</p>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var t=document.querySelector('[data-nav-toggle]'), n=document.querySelector('.nav-links');
+  if(!t||!n) return;
+  t.addEventListener('click', function(){
+    var open = n.getAttribute('data-open')==='true';
+    n.setAttribute('data-open', open?'false':'true');
+    t.setAttribute('aria-expanded', open?'false':'true');
+    t.textContent = open ? '☰' : '✕';
+  });
+})();
+</script>
+</body>
+</html>
