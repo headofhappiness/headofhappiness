@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Lisa Jonsson – konsultpresentation för KC Group</title>
-<meta name="description" content="Konsultpresentation för KC Group: hälsa och arbetsmiljö, med fokus på det som händer efter insatsen.">
+<meta name="description" content="Konsultpresentation för KC Group: hälsa och välmående, med fokus på det som händer efter insatsen.">
 <link rel="icon" href="../assets/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="../assets/favicon-180.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -25,9 +25,6 @@
     .nav-toggle { display: inline-flex; }
   }
   @media (max-width: 400px) { .hh-logo { font-size: 13.5px !important; letter-spacing: 0.06em !important; gap: 9px !important; } }
-  @media (max-width: 430px) { header a[href*="fa-ett-forslag"] { display: none !important; } }
-  .x1:hover { background: #1B4571; color: #FBF7EF; }
-  .x2:hover { background: #FBF7EF; color: #123252; }
 
   .inre { max-width: 1160px; margin: 0 auto; padding: clamp(46px, 6.5vw, 86px) clamp(18px, 4vw, 40px); }
   .smal { max-width: 40em; }
@@ -38,6 +35,12 @@
   p.brod { margin: 0 0 16px; font-size: 17px; line-height: 1.68; color: rgba(18,50,82,0.82); text-wrap: pretty; }
   p.brod:last-child { margin-bottom: 0; }
 
+  .tva { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(26px, 4vw, 56px); align-items: start; }
+  .hero-grid { display: grid; grid-template-columns: 1fr; gap: clamp(28px, 4vw, 52px); align-items: center; }
+  @media (min-width: 860px) { .hero-grid { grid-template-columns: 1.35fr 1fr; } }
+  .portratt { border-radius: 20px; overflow: hidden; background: #F2E9D8; }
+  .portratt img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+
   .rutnat { display: grid; grid-template-columns: repeat(auto-fit, minmax(258px, 1fr)); gap: clamp(18px, 2.4vw, 26px); }
   .kort { background: #fff; border-radius: 18px; padding: clamp(24px, 3vw, 32px); }
   .kort h3 { font-size: clamp(19px, 2.2vw, 23px); line-height: 1.24; margin: 0 0 10px; }
@@ -45,17 +48,15 @@
   .kort .pris { display: block; margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(18,50,82,0.12); font-size: 14.5px; font-weight: 600; color: #A25A4D; }
 
   table.jmf { width: 100%; border-collapse: collapse; font-size: 16px; }
-  table.jmf th { padding: 0 16px 12px 0; text-align: left; font-size: 12.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #A25A4D; border-bottom: 1.5px solid rgba(18,50,82,0.28); }
-  table.jmf td { padding: 15px 16px 15px 0; vertical-align: top; line-height: 1.6; border-bottom: 1px solid rgba(18,50,82,0.12); color: rgba(18,50,82,0.82); }
-  table.jmf td:first-child { font-weight: 600; color: #123252; width: 34%; }
+  table.jmf th { padding: 0 16px 12px 0; text-align: left; font-size: 12.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #F9E0A9; border-bottom: 1.5px solid rgba(251,247,239,0.3); }
+  table.jmf td { padding: 15px 16px 15px 0; vertical-align: top; line-height: 1.6; border-bottom: 1px solid rgba(251,247,239,0.16); color: rgba(251,247,239,0.84); }
+  table.jmf td:first-child { font-weight: 600; color: #FBF7EF; width: 32%; }
   .tabellhölje { overflow-x: auto; }
   @media (max-width: 560px) { table.jmf { font-size: 15px; } table.jmf td:first-child { width: 40%; } }
 
   ul.punkter { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
   ul.punkter li { display: flex; align-items: baseline; gap: 13px; font-size: 16.5px; line-height: 1.58; color: rgba(18,50,82,0.82); }
   ul.punkter li span.bock { flex: none; color: #BF6A5B; font-weight: 700; }
-  ul.punkter.ljus li { color: rgba(251,247,239,0.86); }
-  ul.punkter.ljus li span.bock { color: #F9E0A9; }
 
   blockquote.citat { margin: 0; padding: 0 0 0 22px; border-left: 3px solid #E9B79C; font-family: 'Source Serif 4', Georgia, serif; font-size: clamp(19px, 2.3vw, 24px); line-height: 1.44; color: #123252; }
   blockquote.citat cite { display: block; margin-top: 12px; font-family: 'Figtree', sans-serif; font-style: normal; font-size: 14.5px; letter-spacing: 0.02em; color: rgba(18,50,82,0.6); }
@@ -86,24 +87,29 @@
   <!-- HERO -->
   <section data-screen-label="Hero">
     <div class="inre" style="padding-bottom: clamp(34px, 4vw, 52px);">
-      <p class="etikett">Konsultpresentation för KC Group</p>
-      <h1 style="margin: 0 0 20px; max-width: 16em; font-size: clamp(32px, 5vw, 56px); line-height: 1.07; letter-spacing: -0.022em; text-wrap: balance;">Lisa Jonsson<span style="display: block; color: #BF6A5B;">hälsa och arbetsmiljö</span></h1>
-      <p class="brod smal" style="font-size: clamp(18px, 2vw, 20px);">Ekonom i grunden och akademiskt utbildad hälsopromotör, med utbildning inom bland annat stressfysiologi, coaching och beteendeförändring. Jag arbetar med att väcka medarbetares vilja och stärka deras förmåga att påverka sitt mående.</p>
-      <p class="brod smal">Den här sidan är skriven inför vårt möte den 3 november, så att ni vet vad jag kan bidra med innan vi ses. Hör gärna av dig om något saknas.</p>
+      <div class="hero-grid">
+        <div>
+          <p class="etikett">Konsultpresentation för KC Group</p>
+          <h1 style="margin: 0 0 20px; max-width: 14em; font-size: clamp(32px, 5vw, 56px); line-height: 1.07; letter-spacing: -0.022em; text-wrap: balance;">Lisa Jonsson<span style="display: block; color: #BF6A5B;">hälsa och välmående</span></h1>
+          <p class="brod" style="font-size: clamp(18px, 2vw, 20px);">Jag arbetar med att väcka medarbetares vilja och stärka deras förmåga att påverka sitt mående. Magister i företagsekonomi och kandidatexamen från hälsopromotionsprogrammet vid Göteborgs universitet, med utbildning inom bland annat stressfysiologi, coaching och beteendeförändring.</p>
+          <p class="brod">Den här sidan är skriven inför vårt möte den 3 november, så att ni vet vad jag kan bidra med innan vi ses. Hör gärna av dig om något saknas.</p>
+        </div>
+        <div class="portratt"><img src="../assets/lisa-portratt.jpg" alt="Lisa Jonsson, grundare av Head of Happiness" loading="lazy" decoding="async"></div>
+      </div>
     </div>
   </section>
 
-  <!-- VARFÖR KC GROUP -->
-  <section data-screen-label="Varför KC Group" style="background: #F2E9D8;">
+  <!-- UTGÅNGSPUNKT -->
+  <section data-screen-label="Utgangspunkt" style="background: #F2E9D8;">
     <div class="inre">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(26px, 4vw, 56px); align-items: start;">
+      <div class="tva">
         <div>
           <p class="etikett">Därför hörde jag av mig</p>
           <h2 class="avd">En utgångspunkt jag delar till fullo</h2>
         </div>
         <div>
-          <blockquote class="citat">Våra program och riktade insatser inom hälsa och arbetsmiljö handlar om att öka friskfaktorer, arbetsglädje och psykologisk trygghet.<cite>KC Group, Hälsa och arbetsmiljö</cite></blockquote>
-          <p class="brod" style="margin-top: 22px;">Att arbeta proaktivt och stärka friskfaktorer är precis samma ingång som jag har. Jag kommer inte in när någon redan är sjukskriven, utan innan dess, och jag arbetar med det den enskilda människan faktiskt kan påverka.</p>
+          <blockquote class="citat">Våra program och riktade insatser handlar om att öka friskfaktorer, arbetsglädje och psykologisk trygghet.<cite>KC Group</cite></blockquote>
+          <p class="brod" style="margin-top: 22px;">Att arbeta proaktivt och stärka friskfaktorer är precis samma ingång som jag har. Jag kommer in innan någon blivit sjuk, och jag arbetar med hela människan: sömn, återhämtning, rörelse, relationer, tankar, vanor och egna krav.</p>
           <p class="brod">Utifrån hur jag uppfattar att ni arbetar tror jag att jag kan vara ett komplement snarare än ännu en röst i samma register.</p>
         </div>
       </div>
@@ -125,7 +131,7 @@
         </div>
         <div class="kort">
           <h3>Anonym screening</h3>
-          <p>Bygger på KEDS och WHO-5, samma instrument som används inom vården. Ger arbetsgivaren ett anonymt utgångsläge och individen en bild av sin egen belastning och återhämtning. Går att göra om efteråt.</p>
+          <p>Bygger på KEDS och WHO-5, samma instrument som används inom vården. Ger individen en bild av sin egen belastning och återhämtning, och uppdragsgivaren ett anonymt utgångsläge på gruppnivå. Går att göra om efteråt.</p>
           <span class="pris">Ingår i upplägg, prissätts efter antal</span>
         </div>
         <div class="kort">
@@ -147,20 +153,20 @@
     <div class="inre">
       <p class="etikett ljus">Hur det kompletterar</p>
       <h2 class="avd" style="max-width: 15em;">Det som händer efter dagen</h2>
-      <p class="brod" style="color: rgba(251,247,239,0.84); max-width: 40em;">Ni har redan starka insatser inom hälsa och arbetsmiljö, bland annat Återhämtningsdagen och Stresshantering. Jag vill vara ärlig med att mitt innehåll delvis ligger nära dem. Skillnaden är inte ämnet, utan vad som händer när dagen är slut.</p>
+      <p class="brod" style="color: rgba(251,247,239,0.84); max-width: 40em;">Ni har redan starka insatser på det här området, bland annat Återhämtningsdagen och Stresshantering. Jag vill vara ärlig med att mitt innehåll delvis ligger nära dem. Skillnaden är inte ämnet, utan vad som händer när dagen är slut.</p>
       <p class="brod" style="color: rgba(251,247,239,0.84); max-width: 40em; margin-bottom: 30px;">En insats som avslutas samma dag lämnar deltagaren med inspiration. Min modell lämnar deltagaren med tre månaders stöd, en arbetsbok, frivilliga träffar och en mätning i andra änden. Det är där jag tror att jag tillför något ni inte redan har.</p>
 
       <div class="tabellhölje">
         <table class="jmf">
           <thead>
-            <tr><th>&nbsp;</th><th style="color: #F9E0A9;">Så ser upplägget ut</th></tr>
+            <tr><th>&nbsp;</th><th>Så ser upplägget ut</th></tr>
           </thead>
           <tbody>
             <tr><td>Före</td><td>Anonym screening ger ett utgångsläge på gruppnivå, utan att någon pekas ut.</td></tr>
             <tr><td>Start</td><td>Gemensam föreläsning för hela arbetsplatsen. Två timmar.</td></tr>
             <tr><td>Under tre månader</td><td>Digitalt program och arbetsbok, ungefär en timme totalt att ta i egen takt, plus stöd i vardagen. Frivilliga reflektionsträffar varannan vecka.</td></tr>
             <tr><td>Avslut</td><td>Gemensam timme där gruppen samlas, delar vad som gjort skillnad och gör om mätningen.</td></tr>
-            <tr><td>Resultatet</td><td>En före- och efterbild som arbetsgivaren kan visa upp, och deltagare som vet vad de själva rår över.</td></tr>
+            <tr><td>Resultatet</td><td>En före- och efterbild att visa upp, och deltagare som vet vad de själva rår över.</td></tr>
           </tbody>
         </table>
       </div>
@@ -169,22 +175,22 @@
     </div>
   </section>
 
-  <!-- EGENMAKT -->
-  <section data-screen-label="Egenmakt" style="background: #F2E9D8;">
+  <!-- HELA MÄNNISKAN -->
+  <section data-screen-label="Hela manniskan" style="background: #F2E9D8;">
     <div class="inre">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(26px, 4vw, 56px); align-items: start;">
+      <div class="tva">
         <div>
           <p class="etikett">Min hållning</p>
-          <h2 class="avd">Egenmakt är inte att lösa allt själv</h2>
+          <h2 class="avd">Hela människan, inte bara arbetet</h2>
+          <p class="brod" style="margin-top: 18px;">Belastning kommer sällan från ett enda håll. Den kan komma från arbetet, från livet utanför, eller från de krav vi ställer på oss själva. Därför börjar föreläsningen med att sortera.</p>
         </div>
         <div>
-          <p class="brod">Arbetsgivaren har ansvaret för arbetsmiljön och de organisatoriska förutsättningarna. Samtidigt kan belastningen komma från många delar av livet samtidigt. Därför börjar föreläsningen med att sortera:</p>
-          <ul class="punkter" style="margin: 20px 0;">
+          <ul class="punkter" style="margin: 0 0 20px;">
             <li><span class="bock">1</span><span><strong>Vad belastar mig just nu?</strong> Arbetet, sömnen, relationerna, egna krav, livssituationen, eller flera samtidigt.</span></li>
             <li><span class="bock">2</span><span><strong>Vad kan jag själv påverka?</strong> Till exempel återhämtning, sömn, rörelse, egna krav, tankemönster eller gränser.</span></li>
-            <li><span class="bock">3</span><span><strong>Vad behöver jag lyfta med min chef?</strong> Till exempel otydliga prioriteringar, för höga eller motstridiga krav, för litet handlingsutrymme eller bristande stöd.</span></li>
+            <li><span class="bock">3</span><span><strong>Vad behöver jag lyfta med någon annan?</strong> Till exempel otydliga prioriteringar, för höga eller motstridiga krav, för litet handlingsutrymme eller bristande stöd.</span></li>
           </ul>
-          <p class="brod">Sorteringen är poängen. Den gör att medarbetaren kan agera på det hen själv rår över, och samtidigt sätta ord på det som behöver förändras av någon annan. Att stärka individens egenmakt är alltså inte att flytta arbetsmiljöansvaret.</p>
+          <p class="brod">Sorteringen är poängen. Den gör att medarbetaren kan agera på det hen själv rår över, och samtidigt sätta ord på det som behöver förändras av någon annan. Det är den kombinationen jag menar med egenmakt, och den är något annat än att lämna människor ensamma med sin stress.</p>
         </div>
       </div>
     </div>
@@ -193,7 +199,7 @@
   <!-- KVALITET -->
   <section data-screen-label="Kvalitet">
     <div class="inre">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(26px, 4vw, 56px); align-items: start;">
+      <div class="tva">
         <div>
           <p class="etikett">Kvalitet och underlag</p>
           <h2 class="avd">Det här står bakom</h2>
@@ -201,12 +207,13 @@
         </div>
         <div>
           <ul class="punkter">
+            <li><span class="bock">✓</span><span>Magister i företagsekonomi samt kandidatexamen i hälsopromotion, Göteborgs universitet.</span></li>
             <li><span class="bock">✓</span><span>Innehållet vilar på stressfysiologi, granskat och rekommenderat av specialistläkare i allmänmedicin.</span></li>
             <li><span class="bock">✓</span><span>Screeningen bygger på KEDS och WHO-5, samma instrument som används inom vården.</span></li>
             <li><span class="bock">✓</span><span>Deltagarna ger föreläsningen mellan 4,5 och 4,8 av 5 i utvärderingarna.</span></li>
             <li><span class="bock">✓</span><span>Bakom programmet står hälsopromotörer, en ergonom och en medicinsk rådgivare.</span></li>
             <li><span class="bock">✓</span><span>Godkänt som friskvård och tillgängligt via Epassi, Benifex och Söderberg &amp; Partners Benefits.</span></li>
-            <li><span class="bock">✓</span><span>Head of Happiness AB, org.nr 556834-4518. Egen F-skatt och ansvarsförsäkring.</span></li>
+            <li><span class="bock">✓</span><span>Head of Happiness AB, org.nr 556834-4518.</span></li>
           </ul>
         </div>
       </div>
@@ -227,10 +234,10 @@
     </div>
   </section>
 
-  <!-- FRÅGOR TILL ER -->
-  <section data-screen-label="Frågor">
+  <!-- FRÅGOR -->
+  <section data-screen-label="Fragor">
     <div class="inre">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(26px, 4vw, 56px); align-items: start;">
+      <div class="tva">
         <div>
           <p class="etikett">Inför mötet</p>
           <h2 class="avd">Tre saker jag är nyfiken på</h2>
