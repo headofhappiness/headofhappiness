@@ -58,6 +58,28 @@
   ul.punkter li { display: flex; align-items: baseline; gap: 13px; font-size: 16.5px; line-height: 1.58; color: rgba(18,50,82,0.82); }
   ul.punkter li span.bock { flex: none; color: #BF6A5B; font-weight: 700; }
 
+  .hm-hjul { position: relative; width: 100%; max-width: 520px; margin: 0 auto; aspect-ratio: 1; }
+  .hm-ring { position: absolute; left: 50%; top: 50%; width: 76%; height: 76%; transform: translate(-50%, -50%); border: 1px solid rgba(191,106,91,0.4); border-radius: 50%; }
+  .hm-mitt { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; text-align: center; width: 42%; height: 42%; margin: 0; background: #123252; color: #F9E0A9; border-radius: 50%; font-family: 'Source Serif 4', Georgia, serif; font-size: clamp(17px, 2.6vw, 23px); line-height: 1.2; padding: 8px; }
+  .hm-prick { display: none; }
+  .hm-lista { list-style: none; margin: 0; padding: 0; }
+  .hm-omrade { position: absolute; transform: translate(-50%, -50%); background: #F9E0A9; color: #123252; border-radius: 999px; padding: 9px 16px; font-size: clamp(13px, 1.5vw, 15.5px); font-weight: 500; line-height: 1.25; white-space: normal; max-width: 10em; text-align: center; }
+  @media (max-width: 720px) {
+    .hm-hjul { --ring: 232px; --ringmitt: 130px; position: relative; display: block; aspect-ratio: auto; max-width: 420px; padding-top: 252px; }
+    .hm-ring { display: block; width: calc(var(--ring) * 0.76); height: calc(var(--ring) * 0.76); left: 50%; top: var(--ringmitt); transform: translate(-50%, -50%); }
+    .hm-mitt { position: absolute; left: 50%; top: var(--ringmitt); transform: translate(-50%, -50%); width: calc(var(--ring) * 0.46); height: calc(var(--ring) * 0.46); padding: 6px; font-size: 14px; line-height: 1.15; border-radius: 50%; }
+    .hm-lista { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 18px; width: 100%; }
+    .hm-omrade { position: static; transform: none; background: none; color: #123252; border-radius: 0; padding: 7px 0; max-width: none; min-height: 0; text-align: left; font-size: 14.5px; display: flex; align-items: center; gap: 10px; }
+    .hm-omrade:last-child { grid-column: auto; width: auto; margin: 0; }
+    .hm-prick { display: block; flex: 0 0 auto; width: 11px; height: 11px; border-radius: 50%; background: var(--f); }
+    .hm-omrade::before {
+      content: ""; position: absolute; width: 15px; height: 15px; border-radius: 50%;
+      background: var(--f); transform: translate(-50%, -50%);
+      left: calc(50% + (var(--nx) - 50) * var(--ring) / 100);
+      top: calc(var(--ringmitt) + (var(--ny) - 50) * var(--ring) / 100);
+    }
+  }
+
   blockquote.citat { margin: 0; padding: 0 0 0 22px; border-left: 3px solid #E9B79C; font-family: 'Source Serif 4', Georgia, serif; font-size: clamp(19px, 2.3vw, 24px); line-height: 1.44; color: #123252; }
   blockquote.citat cite { display: block; margin-top: 12px; font-family: 'Figtree', sans-serif; font-style: normal; font-size: 14.5px; letter-spacing: 0.02em; color: rgba(18,50,82,0.6); }
 </style>
@@ -183,6 +205,20 @@
           <p class="etikett">Min hållning</p>
           <h2 class="avd">Hela människan, inte bara arbetet</h2>
           <p class="brod" style="margin-top: 18px;">Belastning kommer sällan från ett enda håll. Den kan komma från arbetet, från livet utanför, eller från de krav vi ställer på oss själva. Därför börjar föreläsningen med att sortera.</p>
+
+          <div class="hm-hjul" style="margin-top: clamp(26px, 4vw, 40px);">
+            <div class="hm-ring" aria-hidden="true"></div>
+            <p class="hm-mitt">Medarbetaren</p>
+            <ul class="hm-lista">
+              <li class="hm-omrade" style="left: 50.0%; top: 9.0%; --nx: 50.0; --ny: 9.0; --f: #BF6A5B;"><span class="hm-prick" aria-hidden="true"></span>Stress &amp; belastning</li>
+              <li class="hm-omrade" style="left: 82.1%; top: 24.4%; --nx: 82.1; --ny: 24.4; --f: #4A6FA5;"><span class="hm-prick" aria-hidden="true"></span>Sömn</li>
+              <li class="hm-omrade" style="left: 90.0%; top: 59.1%; --nx: 90.0; --ny: 59.1; --f: #7F9455;"><span class="hm-prick" aria-hidden="true"></span>Rörelse</li>
+              <li class="hm-omrade" style="left: 67.8%; top: 86.9%; --nx: 67.8; --ny: 86.9; --f: #D19A3C;"><span class="hm-prick" aria-hidden="true"></span>Relationer</li>
+              <li class="hm-omrade" style="left: 32.2%; top: 86.9%; --nx: 32.2; --ny: 86.9; --f: #8E5C7E;"><span class="hm-prick" aria-hidden="true"></span>Det som är viktigt för oss</li>
+              <li class="hm-omrade" style="left: 10.0%; top: 59.1%; --nx: 10.0; --ny: 59.1; --f: #47837B;"><span class="hm-prick" aria-hidden="true"></span>Tankar &amp; känslor</li>
+              <li class="hm-omrade" style="left: 17.9%; top: 24.4%; --nx: 17.9; --ny: 24.4; --f: #123252;"><span class="hm-prick" aria-hidden="true"></span>Återhämtning</li>
+            </ul>
+          </div>
         </div>
         <div>
           <ul class="punkter" style="margin: 0 0 20px;">
@@ -211,7 +247,6 @@
             <li><span class="bock">✓</span><span>Innehållet vilar på stressfysiologi, granskat och rekommenderat av specialistläkare i allmänmedicin.</span></li>
             <li><span class="bock">✓</span><span>Screeningen bygger på KEDS och WHO-5, samma instrument som används inom vården.</span></li>
             <li><span class="bock">✓</span><span>Deltagarna ger föreläsningen mellan 4,5 och 4,8 av 5 i utvärderingarna.</span></li>
-            <li><span class="bock">✓</span><span>Bakom programmet står hälsopromotörer, en ergonom och en medicinsk rådgivare.</span></li>
             <li><span class="bock">✓</span><span>Godkänt som friskvård och tillgängligt via Epassi, Benifex och Söderberg &amp; Partners Benefits.</span></li>
             <li><span class="bock">✓</span><span>Head of Happiness AB, org.nr 556834-4518, med godkänd F-skatt.</span></li>
           </ul>
@@ -226,7 +261,7 @@
       <p class="etikett">Praktiskt</p>
       <h2 class="avd">Så arbetar jag</h2>
       <div class="rutnat" style="margin-top: 28px;">
-        <div class="kort"><h3>Var</h3><p>Hela Sverige på plats, och digitalt var som helst. Jag utgår från Göteborgsområdet, så uppdrag på västkusten går utan resekostnad.</p></div>
+        <div class="kort"><h3>Var</h3><p>Min utgångspunkt är Göteborgsområdet, men jag rör mig självklart dit uppdraget finns. Digitalt fungerar var som helst i landet.</p></div>
         <div class="kort"><h3>Omfattning</h3><p>Allt från en enskild föreläsning till ett sammanhängande upplägg över tre månader. Även stöd till en enskild medarbetare.</p></div>
         <div class="kort"><h3>Målgrupp</h3><p>Hela arbetsplatser snarare än utvalda riskgrupper. Man behöver inte må dåligt för att vilja må bättre.</p></div>
         <div class="kort"><h3>Framförhållning</h3><p>En föreläsning kan oftast bokas med några veckors varsel. Ett helt upplägg vill jag gärna planera en månad i förväg.</p></div>
