@@ -340,7 +340,7 @@
                 <span style="display: block; height: 14px; width: 76%; border-radius: 999px; background: #123252;"></span>
               </span>
               <span style="font-size: 17px; text-align: right; font-variant-numeric: tabular-nums; color: rgba(18,50,82,0.8); font-weight: 600;">5,3</span>
-              <span class="roi-match" style="color: rgba(18,50,82,0.82);">Föreläsningen och det dagliga stödet i mobilen</span>
+              <span class="roi-match" style="color: rgba(18,50,82,0.82);">Föreläsningen och det dagliga stödet att lyssna på</span>
             </div>
 
             <div class="roi-rad">
@@ -416,7 +416,7 @@
             </p>
             <h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(21px, 2.4vw, 27px); line-height: 1.2; letter-spacing: -0.01em;"><a href="stresstecken/">Elva tecken på att stressnivån är för hög →</a></h3>
           </div>
-          <p style="margin: 0; grid-column: span 2; font-size: 16.5px; line-height: 1.64; color: rgba(18,50,82,0.74); text-wrap: pretty;">Svårt att fokusera, huvudvärk, ljudkänslighet, kort stubin. Vanliga signaler på för mycket stress och för lite återhämtning — och varför det är lättare att vända utvecklingen tidigt.</p>
+          <p style="margin: 0; grid-column: span 2; font-size: 16.5px; line-height: 1.64; color: rgba(18,50,82,0.74); text-wrap: pretty;">Svårt att fokusera, huvudvärk, ljudkänslighet, kort stubin. Vanliga signaler på för mycket stress och för lite återhämtning och varför det är lättare att vända utvecklingen tidigt.</p>
         </div>
       
       <div style="border-top: 1px solid rgba(18,50,82,0.13);"></div>
@@ -480,28 +480,6 @@
     n.setAttribute('data-open', open?'false':'true');
     t.setAttribute('aria-expanded', open?'false':'true');
     t.textContent = open ? '\u2630' : '\u2715';
-  });
-})();
-</script>
-
-<script>
-(function(){
-  document.querySelectorAll('form.fangst').forEach(function(f){
-    var svar = f.parentNode.querySelector('.fangst-svar');
-    f.addEventListener('submit', function(e){
-      e.preventDefault();
-      var knapp = f.querySelector('button');
-      knapp.disabled = true; svar.style.color = 'rgba(18,50,82,0.7)'; svar.textContent = 'Skickar…';
-      fetch(f.action, { method: 'POST', body: new FormData(f), headers: { 'Accept': 'application/json' } })
-        .then(function(r){
-          if (r.ok) { f.style.display = 'none'; svar.style.color = '#2C6B54'; svar.textContent = 'Tack! Vi hör av oss.'; }
-          else { knapp.disabled = false; svar.style.color = '#A25A4D'; svar.textContent = 'Det gick inte just nu. Försök igen, eller mejla hej@headofhappiness.se.'; }
-        })
-        .catch(function(){
-          knapp.disabled = false; svar.style.color = '#A25A4D';
-          svar.textContent = 'Det gick inte just nu. Försök igen, eller mejla hej@headofhappiness.se.';
-        });
-    });
   });
 })();
 </script>
