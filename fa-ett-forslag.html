@@ -120,20 +120,20 @@
       <input type="text" name="_gotcha" style="display: none;" tabindex="-1" aria-hidden="true">
           <div style="display: flex; flex-direction: column; gap: 7px;">
             <label for="foretag" style="font-size: 14.5px; font-weight: 600;">Företag</label>
-            <input id="foretag" name="foretag" required="true" placeholder="Organisationens namn" style="min-height: 50px; padding: 0 15px; background: #FBF7EF; border: 1px solid rgba(18,50,82,0.2); border-radius: 10px; font-size: 16px;">
+            <input id="foretag" name="Organisation" required="true" placeholder="Organisationens namn" style="min-height: 50px; padding: 0 15px; background: #FBF7EF; border: 1px solid rgba(18,50,82,0.2); border-radius: 10px; font-size: 16px;">
           </div>
           <div style="display: flex; flex-direction: column; gap: 7px;">
             <label for="namn" style="font-size: 14.5px; font-weight: 600;">Kontaktperson</label>
-            <input id="namn" name="namn" required="true" placeholder="För- och efternamn" style="min-height: 50px; padding: 0 15px; background: #FBF7EF; border: 1px solid rgba(18,50,82,0.2); border-radius: 10px; font-size: 16px;">
+            <input id="namn" name="Kontaktperson" required="true" placeholder="För- och efternamn" style="min-height: 50px; padding: 0 15px; background: #FBF7EF; border: 1px solid rgba(18,50,82,0.2); border-radius: 10px; font-size: 16px;">
           </div>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px;">
             <div style="display: flex; flex-direction: column; gap: 7px;">
               <label for="epost" style="font-size: 14.5px; font-weight: 600;">E-post</label>
-              <input id="epost" name="epost" type="email" required="true" placeholder="namn@foretag.se" style="min-height: 50px; padding: 0 15px; background: #FBF7EF; border: 1px solid rgba(18,50,82,0.2); border-radius: 10px; font-size: 16px;">
+              <input id="epost" name="E-post" type="email" required="true" placeholder="namn@foretag.se" style="min-height: 50px; padding: 0 15px; background: #FBF7EF; border: 1px solid rgba(18,50,82,0.2); border-radius: 10px; font-size: 16px;">
             </div>
             <div style="display: flex; flex-direction: column; gap: 7px;">
               <label for="antal" style="font-size: 14.5px; font-weight: 600;">Ca antal medarbetare</label>
-              <input id="antal" name="antal" type="number" min="1" inputmode="numeric" placeholder="t.ex. 120" style="min-height: 50px; padding: 0 14px; background: #FBF7EF; border: 1px solid rgba(18,50,82,0.2); border-radius: 10px; font-size: 16px;">
+              <input id="antal" name="Antal medarbetare" type="number" min="1" inputmode="numeric" placeholder="t.ex. 120" style="min-height: 50px; padding: 0 14px; background: #FBF7EF; border: 1px solid rgba(18,50,82,0.2); border-radius: 10px; font-size: 16px;">
             </div>
           </div>
 
@@ -141,7 +141,7 @@
             <legend style="padding: 0; margin-bottom: 4px; font-size: 14.5px; font-weight: 600;">Vad vill ni veta mer om?</legend>
             
               <label style="display: flex; align-items: flex-start; gap: 12px; background: #FBF7EF; border: 1px solid rgba(18,50,82,0.15); border-radius: 12px; padding: 14px 16px; cursor: pointer; font-size: 16px; line-height: 1.45;" class="x2">
-                <input type="checkbox" name="screening" style="margin: 3px 0 0; width: 18px; height: 18px; accent-color: #123252; flex: none;">
+                <input type="checkbox" name="Screening" value="Ja" style="margin: 3px 0 0; width: 18px; height: 18px; accent-color: #123252; flex: none;">
                 <span>
                   <span style="display: block; font-weight: 500;">Screening</span>
                   <span style="display: block; font-size: 14.5px; color: rgba(18,50,82,0.62);">Personlig återkoppling + anonym bild på gruppnivå</span>
@@ -149,7 +149,7 @@
               </label>
             
               <label style="display: flex; align-items: flex-start; gap: 12px; background: #FBF7EF; border: 1px solid rgba(18,50,82,0.15); border-radius: 12px; padding: 14px 16px; cursor: pointer; font-size: 16px; line-height: 1.45;" class="x3">
-                <input type="checkbox" name="forelasning" style="margin: 3px 0 0; width: 18px; height: 18px; accent-color: #123252; flex: none;">
+                <input type="checkbox" name="Föreläsning" value="Ja" style="margin: 3px 0 0; width: 18px; height: 18px; accent-color: #123252; flex: none;">
                 <span>
                   <span style="display: block; font-weight: 500;">Föreläsning</span>
                   <span style="display: block; font-size: 14.5px; color: rgba(18,50,82,0.62);">2 timmar inkl. uppstart, på plats eller digitalt</span>
@@ -157,7 +157,7 @@
               </label>
             
               <label style="display: flex; align-items: flex-start; gap: 12px; background: #FBF7EF; border: 1px solid rgba(18,50,82,0.15); border-radius: 12px; padding: 14px 16px; cursor: pointer; font-size: 16px; line-height: 1.45;" class="x4">
-                <input type="checkbox" name="nudging" style="margin: 3px 0 0; width: 18px; height: 18px; accent-color: #123252; flex: none;">
+                <input type="checkbox" name="Dagligt stöd" value="Ja" style="margin: 3px 0 0; width: 18px; height: 18px; accent-color: #123252; flex: none;">
                 <span>
                   <span style="display: block; font-weight: 500;">Dagligt stöd att lyssna till</span>
                   <span style="display: block; font-size: 14.5px; color: rgba(18,50,82,0.62);">Korta övningar att lyssna på, direkt i mobilen</span>
@@ -165,7 +165,7 @@
               </label>
             
               <label style="display: flex; align-items: flex-start; gap: 12px; background: #FBF7EF; border: 1px solid rgba(18,50,82,0.15); border-radius: 12px; padding: 14px 16px; cursor: pointer; font-size: 16px; line-height: 1.45;" class="x5">
-                <input type="checkbox" name="program" style="margin: 3px 0 0; width: 18px; height: 18px; accent-color: #123252; flex: none;">
+                <input type="checkbox" name="Digitalt program" value="Ja" style="margin: 3px 0 0; width: 18px; height: 18px; accent-color: #123252; flex: none;">
                 <span>
                   <span style="display: block; font-weight: 500;">Digitalt program: Från stress till lugn, lust &amp; kraft</span>
                   <span style="display: block; font-size: 14.5px; color: rgba(18,50,82,0.62);">Kunskap, verktyg och övningar med stöd i grupp · öppna live-träffar två gånger i månaden</span>
@@ -173,7 +173,7 @@
               </label>
             
               <label style="display: flex; align-items: flex-start; gap: 12px; background: #FBF7EF; border: 1px solid rgba(18,50,82,0.15); border-radius: 12px; padding: 14px 16px; cursor: pointer; font-size: 16px; line-height: 1.45;" class="x6">
-                <input type="checkbox" name="halsosamtal" style="margin: 3px 0 0; width: 18px; height: 18px; accent-color: #123252; flex: none;">
+                <input type="checkbox" name="Hälsosamtal" value="Ja" style="margin: 3px 0 0; width: 18px; height: 18px; accent-color: #123252; flex: none;">
                 <span>
                   <span style="display: block; font-weight: 500;">Individuella hälsosamtal</span>
                   <span style="display: block; font-size: 14.5px; color: rgba(18,50,82,0.62);">45 minuter per samtal · som tillägg eller i upplägget</span>
@@ -185,7 +185,7 @@
 
           <div style="display: flex; flex-direction: column; gap: 7px;">
             <label for="meddelande" style="font-size: 14.5px; font-weight: 600;">Något vi bör veta? <span style="font-weight: 400; color: rgba(18,50,82,0.5);">Frivilligt</span></label>
-            <textarea id="meddelande" name="meddelande" rows="3" placeholder="Er situation, tidsplan eller frågor" style="padding: 13px 15px; background: #FBF7EF; border: 1px solid rgba(18,50,82,0.2); border-radius: 12px; font-size: 16px; line-height: 1.55; resize: vertical;"></textarea>
+            <textarea id="meddelande" name="Meddelande" rows="3" placeholder="Er situation, tidsplan eller frågor" style="padding: 13px 15px; background: #FBF7EF; border: 1px solid rgba(18,50,82,0.2); border-radius: 12px; font-size: 16px; line-height: 1.55; resize: vertical;"></textarea>
           </div>
           <button type="submit" style="margin-top: 4px; min-height: 56px; padding: 0 30px; background: #123252; color: #FBF7EF; border: none; border-radius: 999px; font-size: 16.5px; font-weight: 600; font-family: inherit; cursor: pointer;" class="x7">Få mitt förslag</button>
           <p style="margin: 0; font-size: 13.5px; line-height: 1.55; color: rgba(18,50,82,0.5);">Vi använder uppgifterna för att skicka ert förslag. Inget nyhetsbrev utan att ni ber om det.</p>
@@ -214,7 +214,28 @@
     t.textContent = open ? '\u2630' : '\u2715';
   });
 })();
+</script>
+<script>
+(function(){
+  var form = document.querySelector('form[action*="formspree.io"]');
+  if (!form) return;
+  var knapp = form.querySelector('button[type="submit"]');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (knapp) { knapp.disabled = true; knapp.textContent = 'Skickar...'; }
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+      .then(function(r){
+        if (r.ok) { window.location.href = '/tack/'; return; }
+        throw new Error('fel');
+      })
+      .catch(function(){
+        if (knapp) { knapp.disabled = false; }
+        form.submit();
+      });
+  });
+})();
 </script>
+
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2417b7c89a04444fa8e5039d313d4722"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
