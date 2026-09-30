@@ -186,7 +186,7 @@
       var knapp = f.querySelector('button');
       knapp.disabled = true; svar.style.color = 'rgba(18,50,82,0.7)'; svar.textContent = 'Skickar…';
       fetch(f.action, { method: 'POST', mode: 'no-cors', body: new FormData(f) })
-        .then(function(){ f.style.display = 'none'; svar.style.color = '#123252'; svar.innerHTML = 'Så fint du vill höras! Ditt första mejl är på väg.<br><span style="display: inline-block; margin-top: 8px; font-size: 15.5px; font-weight: 400; line-height: 1.55; color: rgba(18,50,82,0.72);">Hittar du det inte inom några minuter, titta gärna i skräpposten. Markerar du det som inte skräppost hittar nästa mejl rätt direkt.</span>'; })
+        .then(function(){ f.style.display = 'none'; svar.style.color = '#123252'; svar.innerHTML = 'Så fint du vill höras! Ditt första mejl är på väg.<span style="display: block; margin-top: 10px; padding: 14px 16px; background: #FBF7EF; border-radius: 12px; font-size: 15.5px; font-weight: 400; line-height: 1.55; color: rgba(18,50,82,0.82);">Hittar du det inte i inkorgen, titta under fliken <strong>Kampanjer</strong> om du har Gmail, eller i <strong>skräpposten</strong>. Flyttar du mejlet till inkorgen hittar nästa rätt direkt.</span>'; })
         .catch(function(){
           knapp.disabled = false; svar.style.color = '#A25A4D';
           svar.textContent = 'Det gick inte just nu. Försök igen, eller mejla hej@headofhappiness.se.';
