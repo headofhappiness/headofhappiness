@@ -898,7 +898,7 @@
       var knapp = f.querySelector('button');
       knapp.disabled = true; svar.style.color = 'rgba(18,50,82,0.7)'; svar.textContent = 'Skickar…';
       fetch(f.action, { method: 'POST', mode: 'no-cors', body: new FormData(f) })
-        .then(function(){ f.style.display = 'none'; svar.style.color = '#2C6B54'; svar.textContent = 'Tack! Första mejlet är på väg.'; })
+        .then(function(){ f.style.display = 'none'; svar.style.color = '#2C6B54'; svar.textContent = 'Så fint du vill höras! Ditt första mejl är på väg.'; })
         .catch(function(){
           knapp.disabled = false; svar.style.color = '#A25A4D';
           svar.textContent = 'Det gick inte just nu. Försök igen, eller mejla hej@headofhappiness.se.';
