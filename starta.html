@@ -836,7 +836,7 @@
           <button type="submit"
             style="flex: 0 0 auto; min-height: 52px; padding: 0 30px; background: #123252; color: #FBF7EF; border: 0; border-radius: 999px; font-family: 'Figtree', system-ui, sans-serif; font-size: 16.5px; font-weight: 600; cursor: pointer;" class="x1">Ja tack, skicka mejlen&nbsp;&#8594;</button>
         </form>
-        <p class="fangst-svar" style="margin: 12px 0 0; font-size: 15.5px; color: #2C6B54; min-height: 1.4em;" role="status"></p>
+        <p class="fangst-svar" style="margin: 12px 0 0; font-size: 17px; font-weight: 600; color: #123252; min-height: 1.4em;" role="status"></p>
         <p style="margin: 10px 0 0; font-size: 13.5px; line-height: 1.6; color: rgba(18,50,82,0.68);">Du kan avsluta när du vill. Vi använder din adress bara för detta och lämnar den inte vidare. Läs mer i <a href="integritetspolicy-app/" style="color: #A25A4D; text-decoration: underline; text-underline-offset: 2px;">integritetspolicyn</a>.</p>
       </div>
     </div>
@@ -892,13 +892,13 @@
 <script>
 (function(){
   document.querySelectorAll('form.fangst').forEach(function(f){
-    var svar = f.parentNode.querySelector('.fangst-svar');
+    var svar = f.parentNode.querySelector('.fangst-svar') || document.createElement('p');
     f.addEventListener('submit', function(e){
       e.preventDefault();
       var knapp = f.querySelector('button');
       knapp.disabled = true; svar.style.color = 'rgba(18,50,82,0.7)'; svar.textContent = 'Skickar…';
       fetch(f.action, { method: 'POST', mode: 'no-cors', body: new FormData(f) })
-        .then(function(){ f.style.display = 'none'; svar.style.color = '#2C6B54'; svar.textContent = 'Så fint du vill höras! Ditt första mejl är på väg.'; })
+        .then(function(){ f.style.display = 'none'; svar.style.color = '#123252'; svar.textContent = 'Så fint du vill höras! Ditt första mejl är på väg.'; })
         .catch(function(){
           knapp.disabled = false; svar.style.color = '#A25A4D';
           svar.textContent = 'Det gick inte just nu. Försök igen, eller mejla hej@headofhappiness.se.';
